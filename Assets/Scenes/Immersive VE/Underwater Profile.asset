@@ -18,10 +18,10 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.9
+    m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   scatter:
     m_OverrideState: 0
     m_Value: 0.7
@@ -47,25 +47,7 @@ MonoBehaviour:
   dirtIntensity:
     m_OverrideState: 0
     m_Value: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: Underwater Profile
-  m_EditorClassIdentifier: 
-  components:
-  - {fileID: 3449599092817644829}
-  - {fileID: 2571714559534228491}
-  - {fileID: 2990266395165159836}
-  - {fileID: 9205215621932417060}
-  - {fileID: -9210233236396064597}
---- !u!114 &2571714559534228491
+--- !u!114 &-8254576077274257879
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -80,13 +62,30 @@ MonoBehaviour:
   active: 1
   lift:
     m_OverrideState: 1
-    m_Value: {x: 0.15639251, y: 0.8599502, z: 1, w: 0}
+    m_Value: {x: 0.9728348, y: 0.996319, z: 1, w: 0}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 0.21940178, y: 0.8784387, z: 1, w: 0}
+    m_Value: {x: 0.84007126, y: 1, z: 0.93575585, w: 0}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 0.26105464, y: 0.74253094, z: 1, w: 0}
+    m_Value: {x: 0.8017136, y: 0.8825567, z: 1, w: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: Underwater Profile
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: -8254576077274257879}
+  - {fileID: 2990266395165159836}
+  - {fileID: 9205215621932417060}
+  - {fileID: -9210233236396064597}
 --- !u!114 &2990266395165159836
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -127,34 +126,6 @@ MonoBehaviour:
   maxNits:
     m_OverrideState: 0
     m_Value: 1000
---- !u!114 &3449599092817644829
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
-  m_Name: Vignette
-  m_EditorClassIdentifier: 
-  active: 1
-  color:
-    m_OverrideState: 1
-    m_Value: {r: 0, g: 0, b: 0, a: 1}
-  center:
-    m_OverrideState: 1
-    m_Value: {x: 0.5, y: 0.5}
-  intensity:
-    m_OverrideState: 1
-    m_Value: 0.25
-  smoothness:
-    m_OverrideState: 1
-    m_Value: 0.2
-  rounded:
-    m_OverrideState: 0
-    m_Value: 0
 --- !u!114 &9205215621932417060
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -169,17 +140,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   postExposure:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
   contrast:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_Value: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 1}
   hueShift:
     m_OverrideState: 0
     m_Value: 0
   saturation:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
