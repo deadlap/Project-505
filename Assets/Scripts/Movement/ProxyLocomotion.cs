@@ -3,75 +3,59 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ProxyLocomotion : MonoBehaviour {
-    // Public references to the hand GameObjects
-    public GameObject leftHandObject;
-    public GameObject rightHandObject;
 
-    // Public settings
-    public float swingThreshold = 0.05f;  // Minimum arm swing speed to trigger movement
-    public float movementSpeed = 1.5f;    // Movement speed multiplier
-    public float smoothness = 0.1f;       // Smooth movement factor
+    //Player Objects
+    [SerializeField] private GameObject LeftHand;
+    [SerializeField] private GameObject RightHand;
+    private Transform HeadTransform;
+    private CharacterController PlayerCharacterController;
 
-    // Private variables to track hand movement
-    private Vector3 previousLeftHandPosition;
-    private Vector3 previousRightHandPosition;
-    private Vector3 currentVelocity;
+    // Settings 
 
-    // Components for movement
-    private CharacterController characterController;
-    private Transform headTransform; // For forward movement direction (the VR headset or camera)
+    [SerializeField] float SwingThreshold; //A minimum value for how much the arms should swing to move the user
+    [SerializeField] float MovementSpeed; //How fast the user should move;
+    [SerializeField] float Smoothness;
+    
+    private Vector3 MotionVector;
+    //Vector3 Positions for previous hand positions
+    private Vector3 PreviousLeftHandPosition;
+    private Vector3 PreviousRightHandPosition;
 
-    void Start()
-    {
-        // Initialize positions and components
-        previousLeftHandPosition = leftHandObject.transform.position;
-        previousRightHandPosition = rightHandObject.transform.position;
+    void Start() {
+        PreviousLeftHandPosition = RemoveXCoordinate(LeftHand.transform.position); //set previous positions
+        PreviousRightHandPosition = RemoveXCoordinate(RightHand.transform.position);
 
-        characterController = GetComponent<CharacterController>();
-        headTransform = Camera.main.transform; // Assuming VR headset camera is tagged as MainCamera
+        PlayerCharacterController = GetComponent<CharacterController>();
+        HeadTransform = Camera.main.transform;
+        MotionVector = Vector3.zero;
     }
 
-    void Update()
-    {
-        // Track the current positions of both hands
-        Vector3 currentLeftHandPosition = leftHandObject.transform.position;
-        Vector3 currentRightHandPosition = rightHandObject.transform.position;
-
-        // Calculate hand velocities (difference in position over time)
-        Vector3 leftHandMovement = currentLeftHandPosition - previousLeftHandPosition;
-        Vector3 rightHandMovement = currentRightHandPosition - previousRightHandPosition;
-
-        // Calculate the average hand speed
-        float leftHandSpeed = leftHandMovement.magnitude / Time.deltaTime;
-        float rightHandSpeed = rightHandMovement.magnitude / Time.deltaTime;
-
-        Debug.Log((new Vector3(headTransform.forward.x, 0, headTransform.forward.z).normalized) * movementSpeed * (leftHandSpeed + rightHandSpeed) / 2f);
+    void Update() {
         
-        Debug.Log("lefthand:" + leftHandSpeed);
+        //We only want to see direction in the y and z axis to check if the user is swinging their arms.
+        
+        Vector3 currentLeftHandPosition = RemoveXCoordinate(LeftHand.transform.position);
+        Vector3 currentRightHandPosition = RemoveXCoordinate(RightHand.transform.position);
+        float leftHandVelocity = (currentLeftHandPosition-PreviousLeftHandPosition).magnitude;
+        float rightHandVelocity = (currentRightHandPosition-PreviousRightHandPosition).magnitude;
+        // Debug.Log("Right hand: " + rightHandVelocity);
+        // Debug.Log("Left hand: " + leftHandVelocity);
 
-        Debug.Log("Righthand:" + rightHandSpeed);
+        if (leftHandVelocity >= SwingThreshold && rightHandVelocity >= SwingThreshold) {
+            // PlayerCharacterController.Move(HeadTransform.forward * MovementSpeed * Time.deltaTime);
 
-        // Only move forward if both hands are moving fast enough (above the threshold)
-        if (leftHandSpeed > swingThreshold && rightHandSpeed > swingThreshold)
-        {
-            // Get forward direction based on head orientation
-            Vector3 forwardDirection = new Vector3(headTransform.forward.x, 0, headTransform.forward.z).normalized;
-
-            // Compute velocity from hand swing speed
-            currentVelocity = forwardDirection * movementSpeed * (leftHandSpeed + rightHandSpeed) / 2f;
-
+            MotionVector = HeadTransform.forward * MovementSpeed * Time.deltaTime;
+        } else {
+            MotionVector = Vector3.Lerp(MotionVector, Vector3.zero, Smoothness);
         }
-        else
-        {
-            // Smoothly decelerate to stop
-            currentVelocity = Vector3.Lerp(currentVelocity, Vector3.zero, smoothness);
-        }
+        PlayerCharacterController.Move(MotionVector);
 
-        // Apply movement to the character controller
-        characterController.Move(currentVelocity * Time.deltaTime);
+        // set previous position of hands to what they currently are, for the next update
+        PreviousLeftHandPosition = currentLeftHandPosition;
+        PreviousRightHandPosition = currentRightHandPosition;
+    }
 
-        // Update the previous hand positions for the next frame
-        previousLeftHandPosition = currentLeftHandPosition;
-        previousRightHandPosition = currentRightHandPosition;
+    public Vector3 RemoveXCoordinate(Vector3 inputVector) {
+        return new Vector3(0, inputVector.y, inputVector.z);
     }
 }
