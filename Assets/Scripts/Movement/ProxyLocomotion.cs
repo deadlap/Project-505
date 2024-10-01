@@ -32,7 +32,7 @@ public class ProxyLocomotion : MonoBehaviour {
     }
 
     void Update() {
-        // var leftHandStickValue = LeftJoystickInput.action?.ReadValue<Vector2>() ?? Vector2.zero;
+        // var leftHandStickValue = LeftJoystickInput.action?.ReadValue<Vector2>() ?? Vector2.zero; //InverseTransformPoint
         // Vector3 leftHandValue = Vector3.Cross(new Vector3(leftHandStickValue.x, 0, leftHandStickValue.y), ForwardTransform.forward);
         // Debug.Log(leftHandValue);
 
