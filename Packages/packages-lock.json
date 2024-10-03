@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "com.cqf.urpvolumetricfog": {
+      "version": "file:../Assets/Unity-URP-Volumetric-Light-main",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.render-pipelines.universal": ""
+      }
+    },
     "com.unity.burst": {
       "version": "1.8.8",
       "depth": 1,

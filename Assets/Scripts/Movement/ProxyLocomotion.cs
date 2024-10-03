@@ -8,7 +8,6 @@ public class ProxyLocomotion : MonoBehaviour {
     [SerializeField] private GameObject LeftHand;
     [SerializeField] private GameObject RightHand;
 
-    [SerializeField] private InputActionProperty LeftJoystickInput;
     private Transform HeadTransform;
     private CharacterController PlayerCharacterController;
     [SerializeField] Transform ForwardTransform;
@@ -23,6 +22,10 @@ public class ProxyLocomotion : MonoBehaviour {
     private Vector3 PreviousLeftHandPosition;
     private Vector3 PreviousRightHandPosition;
 
+    [SerializeField] private InputActionProperty LeftJoystickInput;
+    [SerializeField] private InputActionProperty LeftControllerTrigger;
+    [SerializeField] private InputActionProperty RightControllerTrigger;
+
     void Start() {
         PreviousLeftHandPosition = RemoveXCoordinate(LeftHand.transform.position); //set previous positions
         PreviousRightHandPosition = RemoveXCoordinate(RightHand.transform.position);
@@ -33,11 +36,12 @@ public class ProxyLocomotion : MonoBehaviour {
 
     void Update() {
         // var leftHandStickValue = LeftJoystickInput.action?.ReadValue<Vector2>() ?? Vector2.zero; //InverseTransformPoint
-        // Vector3 leftHandValue = Vector3.Cross(new Vector3(leftHandStickValue.x, 0, leftHandStickValue.y), ForwardTransform.forward);
-        // Debug.Log(leftHandValue);
+        // Vector3 leftHandValue = Vector3.InverseTransformPoint(new Vector3(leftHandStickValue.y, 0,leftHandStickValue.x), ForwardTransform.forward);
 
         //We only want to see direction in the y and z axis to check if the user is swinging their arms.
         
+        // var leftHandStickValue = LeftJoystickInput.action?.ReadValue<Vector2>() ?? Vector2.zero; //InverseTransformPoint
+
         Vector3 currentLeftHandPosition = RemoveXCoordinate(LeftHand.transform.position);
         Vector3 currentRightHandPosition = RemoveXCoordinate(RightHand.transform.position);
 
@@ -45,7 +49,8 @@ public class ProxyLocomotion : MonoBehaviour {
         float rightHandVelocity = (currentRightHandPosition-PreviousRightHandPosition).magnitude;
 
         // if (leftHandVelocity >= SwingThreshold && rightHandVelocity >= SwingThreshold && leftHandStickValue.magnitude > 0.25) {
-        if (leftHandVelocity >= SwingThreshold && rightHandVelocity >= SwingThreshold) {
+        if ((leftHandVelocity >= SwingThreshold && LeftControllerTrigger.action?.ReadValue<float>() > 0)
+            || (rightHandVelocity >= SwingThreshold && RightControllerTrigger.action?.ReadValue<float>() > 0)) {
 
             MotionVector = ForwardTransform.forward * MovementSpeed * Time.deltaTime;
 
