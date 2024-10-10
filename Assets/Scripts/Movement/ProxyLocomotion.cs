@@ -39,7 +39,6 @@ public class ProxyLocomotion : MonoBehaviour {
 
         PlayerCharacterController = GetComponent<CharacterController>();
         MotionVector = Vector3.zero;
-        NormalMove = GetComponent<DynamicMoveProvider>();
     }
 
     void Update() {
