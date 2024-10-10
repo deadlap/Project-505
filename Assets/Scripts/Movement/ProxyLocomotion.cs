@@ -58,7 +58,6 @@ public class ProxyLocomotion : MonoBehaviour {
             NormalMove.enabled = false;
         }
 
-        // Debug.Log(RemoveYCoordinate(ForwardTransform.forward).normalized);
         if (MovementType == 2 && (leftHandVelocity >= SwingThreshold && rightHandVelocity >= SwingThreshold && fixedVectorThing.magnitude > 0.25)) {
             MotionVector = leftHandValue * MovementSpeed * Time.deltaTime;
         
@@ -67,12 +66,8 @@ public class ProxyLocomotion : MonoBehaviour {
 
             MotionVector = RemoveYCoordinate(ForwardTransform.forward).normalized * MovementSpeed * Time.deltaTime;
             Debug.Log(MotionVector);
-        } 
-        // else {
-        if (MovementType != 1) {
-            MotionVector = Vector3.Lerp(MotionVector, Vector3.zero, Smoothness);
         }
-        // }
+        MotionVector = Vector3.Lerp(MotionVector, Vector3.zero, Smoothness);
         PlayerCharacterController.Move(MotionVector);
 
         // set previous position of hands to what they currently are, for the next update
