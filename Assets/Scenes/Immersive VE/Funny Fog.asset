@@ -153,7 +153,7 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 1
   attenuationDistance:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 124
   tint:
     m_OverrideState: 0
@@ -163,16 +163,16 @@ MonoBehaviour:
     m_Value: 0.99
   mainLightScattering:
     m_OverrideState: 0
-    m_Value: 0.15
+    m_Value: 0.03
   additionalLightsAnisotropy:
     m_OverrideState: 1
-    m_Value: 0.291
+    m_Value: 0.081
   additionalLightsScattering:
     m_OverrideState: 1
-    m_Value: 7.2
+    m_Value: 21
   additionalLightsRadius:
     m_OverrideState: 1
-    m_Value: 0.258
+    m_Value: 0.264
   maxSteps:
     m_OverrideState: 1
     m_Value: 256
