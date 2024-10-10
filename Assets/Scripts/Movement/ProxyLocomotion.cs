@@ -21,7 +21,7 @@ public class ProxyLocomotion : MonoBehaviour {
     [SerializeField] float SwingThreshold; //A minimum value for how much the arms should swing to move the user
     [SerializeField] float MovementSpeed; //How fast the user should move;
     [SerializeField] float Smoothness;
-    [SerializeField] int MovementType; //1 is normal controller, 2 is holding buttons down and swinging arms, 3 is nikolajs suggestion.
+    [SerializeField] int MovementType; //1 is normal controller, 3 is holding buttons down and swinging arms, 2 is nikolajs suggestion.
     
     
     private Vector3 MotionVector;
@@ -65,7 +65,7 @@ public class ProxyLocomotion : MonoBehaviour {
         } else if (MovementType == 3 && ((leftHandVelocity >= SwingThreshold && LeftControllerTrigger.action?.ReadValue<float>() > 0)
             || (rightHandVelocity >= SwingThreshold && RightControllerTrigger.action?.ReadValue<float>() > 0))) {
 
-            MotionVector = ForwardTransform.forward * MovementSpeed * Time.deltaTime;
+            MotionVector = RemoveYCoordinate(ForwardTransform.forward).normalized * MovementSpeed * Time.deltaTime;
 
         } else {
             MotionVector = Vector3.Lerp(MotionVector, Vector3.zero, Smoothness);
@@ -79,5 +79,8 @@ public class ProxyLocomotion : MonoBehaviour {
 
     private Vector3 RemoveXCoordinate(Vector3 inputVector) {
         return new Vector3(0, inputVector.y, inputVector.z);
+    }
+    private Vector3 RemoveYCoordinate(Vector3 inputVector) {
+        return new Vector3(inputVector.x, 0, inputVector.z);
     }
 }
