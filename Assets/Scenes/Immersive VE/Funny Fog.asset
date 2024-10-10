@@ -160,13 +160,13 @@ MonoBehaviour:
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   mainLightAnisotropy:
     m_OverrideState: 0
-    m_Value: 0.413
+    m_Value: 0.99
   mainLightScattering:
     m_OverrideState: 0
     m_Value: 0.15
   additionalLightsAnisotropy:
     m_OverrideState: 1
-    m_Value: 0.608
+    m_Value: 0.291
   additionalLightsScattering:
     m_OverrideState: 1
     m_Value: 7.2

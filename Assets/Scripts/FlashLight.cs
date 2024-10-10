@@ -9,7 +9,7 @@ public class FlashLight : MonoBehaviour {
         Light.SetActive(false);
     }
 
-    public void ToggleFlashlight(ActivateEventArgs arg){
+    // public void ToggleFlashlight(ActivateEventArgs arg){
         
-    }
+    // }
 }
