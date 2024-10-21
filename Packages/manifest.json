@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.cqf.urpvolumetricfog": "file:../Assets/Unity-URP-Volumetric-Light-main",
     "com.unity.collab-proxy": "2.5.1",
     "com.unity.ide.rider": "3.0.24",
     "com.unity.ide.visualstudio": "2.0.18",
