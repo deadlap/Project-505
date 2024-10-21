@@ -81,4 +81,8 @@ public class ProxyLocomotion : MonoBehaviour {
     private Vector3 RemoveYCoordinate(Vector3 inputVector) {
         return new Vector3(inputVector.x, 0, inputVector.z);
     }
+
+    public void ChangeLocomotionType(int type){
+        MovementType = type;
+    }
 }
