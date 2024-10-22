@@ -17,7 +17,9 @@ public class Equipment : MonoBehaviour {
     void Start() {
         // RB = GetComponent<Rigidbody>();)
     }
+    void Disable(){
 
+    }
     void Update() {
         if (!Equipped && Vector3.Distance(transform.position, BaseLocation.transform.position) > DistanceThreshold) {
             transform.position = Vector3.Lerp(transform.position, BaseLocation.transform.position, Speed);
@@ -27,6 +29,7 @@ public class Equipment : MonoBehaviour {
             transform.position = BaseLocation.transform.position;
             transform.rotation = BaseLocation.transform.rotation;
             RB.velocity = Vector3.zero;
+            Disable();
         }
     	// RB.useGravity = Equipped;
     }

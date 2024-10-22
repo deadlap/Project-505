@@ -17,14 +17,14 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1
   threshold:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   intensity:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   scatter:
     m_OverrideState: 0
-    m_Value: 0.7
+    m_Value: 0
   clamp:
     m_OverrideState: 0
     m_Value: 65472
@@ -47,28 +47,6 @@ MonoBehaviour:
   dirtIntensity:
     m_OverrideState: 0
     m_Value: 0
---- !u!114 &-3025891430107004274
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
-  m_Name: LiftGammaGain
-  m_EditorClassIdentifier: 
-  active: 1
-  lift:
-    m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
-  gamma:
-    m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
-  gain:
-    m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,7 +60,7 @@ MonoBehaviour:
   m_Name: Funny Fog
   m_EditorClassIdentifier: 
   components:
-  - {fileID: -3025891430107004274}
+  - {fileID: 6233359937229799641}
   - {fileID: 2990266395165159836}
   - {fileID: 9205215621932417060}
   - {fileID: -9210233236396064597}
@@ -127,6 +105,28 @@ MonoBehaviour:
   maxNits:
     m_OverrideState: 0
     m_Value: 1000
+--- !u!114 &6233359937229799641
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
+  m_Name: LiftGammaGain
+  m_EditorClassIdentifier: 
+  active: 1
+  lift:
+    m_OverrideState: 1
+    m_Value: {x: 0.88331795, y: 1, z: 0.9780054, w: -0.035026267}
+  gamma:
+    m_OverrideState: 1
+    m_Value: {x: 0.84358394, y: 0.8826876, z: 1, w: 0.19264446}
+  gain:
+    m_OverrideState: 1
+    m_Value: {x: 0.8599726, y: 0.9314852, z: 1, w: -0.1576182}
 --- !u!114 &8395214652028536263
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -142,7 +142,7 @@ MonoBehaviour:
   active: 1
   distance:
     m_OverrideState: 1
-    m_Value: 16
+    m_Value: 32
   baseHeight:
     m_OverrideState: 0
     m_Value: 0
@@ -154,13 +154,13 @@ MonoBehaviour:
     m_Value: 1
   attenuationDistance:
     m_OverrideState: 1
-    m_Value: 124
+    m_Value: 5
   tint:
     m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_Value: {r: 0.0030352087, g: 0.071496055, b: 0.022726608, a: 1}
   mainLightAnisotropy:
     m_OverrideState: 0
-    m_Value: 0.99
+    m_Value: 0.379
   mainLightScattering:
     m_OverrideState: 0
     m_Value: 0.03
@@ -169,15 +169,15 @@ MonoBehaviour:
     m_Value: 0.081
   additionalLightsScattering:
     m_OverrideState: 1
-    m_Value: 21
+    m_Value: 4.9
   additionalLightsRadius:
     m_OverrideState: 1
-    m_Value: 0.264
+    m_Value: 0.289
   maxSteps:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 256
   blurIterations:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 4
   enabled:
     m_OverrideState: 1
@@ -202,8 +202,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   colorFilter:
-    m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_OverrideState: 0
+    m_Value: {r: 0.055535786, g: 0.3018868, b: 0.16751353, a: 1}
   hueShift:
     m_OverrideState: 0
     m_Value: 0
