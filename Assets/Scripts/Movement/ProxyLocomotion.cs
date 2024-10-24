@@ -62,7 +62,7 @@ public class ProxyLocomotion : MonoBehaviour {
         Vector3 leftHandValue = ForwardTransform.TransformDirection(fixedVectorThing);
 
         if (MovementType == 2) {
-            if (leftHandVelocity >= SwingThreshold && rightHandVelocity >= SwingThreshold && fixedVectorThing.magnitude > 0.25) {
+            if (leftHandVelocity >= SwingThreshold && fixedVectorThing.magnitude > 0.25) {
                 // speed =  getSpeed(leftHandVelocity);
                 speed = MovementSpeed;
                 MotionVector = leftHandValue * speed * Time.deltaTime;
