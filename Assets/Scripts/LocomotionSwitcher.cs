@@ -13,7 +13,8 @@ public class LocomotionSwitcher : MonoBehaviour {
             Light.SetActive(true);
         }
     }
-    void Update(){
+
+    void OnTriggerExit(Collider other){
         Light.SetActive(false);
     }
 }
