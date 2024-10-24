@@ -152,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 104900548}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.25, y: 11.57, z: 56.45}
+  m_LocalPosition: {x: -25.25, y: 9.452, z: 56.45}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -271,7 +271,7 @@ Transform:
   m_GameObject: {fileID: 140848298}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.05, y: 11.57, z: 98.54}
+  m_LocalPosition: {x: -20.05, y: 9.64, z: 98.54}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1278,7 +1278,7 @@ Transform:
   m_GameObject: {fileID: 442863730}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 88.26, y: 11.57, z: 71}
+  m_LocalPosition: {x: 88.26, y: 9.88, z: 71}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1822,7 +1822,7 @@ Transform:
   m_GameObject: {fileID: 634256423}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.5, y: 10.981, z: 25.9}
+  m_LocalPosition: {x: -26.5, y: 9.729, z: 25.9}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5196,7 +5196,7 @@ Transform:
   m_GameObject: {fileID: 1519921181}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 84.3, y: 11.57, z: 117}
+  m_LocalPosition: {x: 84.3, y: 10.35, z: 117}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5722,7 +5722,7 @@ Transform:
   m_GameObject: {fileID: 1678708436}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.8, y: 11.57, z: 115.1}
+  m_LocalPosition: {x: 35.8, y: 9.51, z: 115.1}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8878,8 +8878,8 @@ MonoBehaviour:
   RightHand: {fileID: 2869676290544412583}
   NormalMove: {fileID: 7211976698745786758}
   ForwardTransform: {fileID: 4576246155616750503}
-  SwingThreshold: 0.022
-  MovementSpeed: 2.5
+  SwingThreshold: 0.03
+  MovementSpeed: 1.5
   Smoothness: 0.1
   MovementType: 1
   MaxSwingSpeed: 0

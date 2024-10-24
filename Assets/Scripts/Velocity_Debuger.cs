@@ -15,7 +15,7 @@ public class Velocity_Debuger : MonoBehaviour {
     void Update() {
         Vector3 HandPosition = RemoveXCoordinate(Hand.transform.position);
         float HandVelocity = (HandPosition-PreviousHandPosition).magnitude;
-        float HandVelocity = Mathf.Round(f * 1000.0f) * 0.001f;
+        HandVelocity = Mathf.Round(HandVelocity * 1000.0f) * 0.001f;
         text.text = ""+HandVelocity;
         PreviousHandPosition = HandPosition;
     }
