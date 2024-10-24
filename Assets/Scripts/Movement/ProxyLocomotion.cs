@@ -31,10 +31,11 @@ public class ProxyLocomotion : MonoBehaviour {
     [SerializeField] private InputActionProperty LeftJoystickInput;
     [SerializeField] private InputActionProperty LeftControllerTrigger;
     [SerializeField] private InputActionProperty RightControllerTrigger;
+    bool lastFrameMoved;
 
     void Start() {
-        PreviousLeftHandPosition = RemoveXCoordinate(LeftHand.transform.position); //set previous positions
-        PreviousRightHandPosition = RemoveXCoordinate(RightHand.transform.position);
+        PreviousLeftHandPosition = RemoveXCoordinate(LeftHand.transform.localPosition); //set previous positions
+        PreviousRightHandPosition = RemoveXCoordinate(RightHand.transform.localPosition);
 
         PlayerCharacterController = GetComponent<CharacterController>();
         MotionVector = Vector3.zero;
@@ -44,8 +45,8 @@ public class ProxyLocomotion : MonoBehaviour {
         float speed = 0;
 
         //We only want to see direction in the y and z axis to check if the user is swinging their arms.
-        Vector3 currentLeftHandPosition = RemoveXCoordinate(LeftHand.transform.position);
-        Vector3 currentRightHandPosition = RemoveXCoordinate(RightHand.transform.position);
+        Vector3 currentLeftHandPosition = RemoveXCoordinate(LeftHand.transform.localPosition);
+        Vector3 currentRightHandPosition = RemoveXCoordinate(RightHand.transform.localPosition);
 
         float leftHandVelocity = (currentLeftHandPosition-PreviousLeftHandPosition).magnitude;
         float rightHandVelocity = (currentRightHandPosition-PreviousRightHandPosition).magnitude;
@@ -64,7 +65,10 @@ public class ProxyLocomotion : MonoBehaviour {
             if (leftHandVelocity >= SwingThreshold && rightHandVelocity >= SwingThreshold && fixedVectorThing.magnitude > 0.25) {
                 // speed =  getSpeed(leftHandVelocity);
                 speed = MovementSpeed;
-                // MotionVector = leftHandValue * speed * Time.deltaTime;
+                MotionVector = leftHandValue * speed * Time.deltaTime;
+                // lastFrameMoved = ;
+            } else {
+                lastFrameMoved = false;
             }
         } else if (MovementType == 3) {
             if ((leftHandVelocity >= SwingThreshold && LeftControllerTrigger.action?.ReadValue<float>() > 0)
