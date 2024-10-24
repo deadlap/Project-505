@@ -10,9 +10,8 @@ public class CheckPoint : MonoBehaviour {
 
 
     void OnTriggerEnter(Collider other) {
-        Debug.Log("hej");
-        if (other.CompareTag("Player")) {
-            Destroy(gameObject); Debug.Log("hej 2");
+        if (other.CompareTag("Player") || other.CompareTag("Hand")) {
+            Destroy(gameObject);
         }
     }
     // void OnEnable() {
