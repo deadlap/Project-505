@@ -56,16 +56,11 @@ public class ProxyLocomotion : MonoBehaviour {
             NormalMove.enabled = false;
         }
 
-        var leftHandStickValue = LeftJoystickInput.action?.ReadValue<Vector2>() ?? Vector2.zero;
-        Vector3 fixedVectorThing = (new Vector3(leftHandStickValue.x, 0, leftHandStickValue.y));
-        Vector3 leftHandValue = ForwardTransform.TransformDirection(fixedVectorThing);
-
         if (MovementType == 2) {
             if ((leftHandVelocity >= SwingThreshold && LeftControllerTrigger.action?.ReadValue<float>() > 0)
                 || (rightHandVelocity >= SwingThreshold && RightControllerTrigger.action?.ReadValue<float>() > 0)) {
                 float leftSpeed = getSpeed(leftHandVelocity);
                 float rightSpeed = getSpeed(rightHandVelocity);
-                // speed = MovementSpeed;
                 if (RightControllerTrigger.action?.ReadValue<float>() > 0 && LeftControllerTrigger.action?.ReadValue<float>() > 0){
                     speed = (leftSpeed+rightSpeed)/2;
                 } else if (LeftControllerTrigger.action?.ReadValue<float>() > 0) {
@@ -73,12 +68,9 @@ public class ProxyLocomotion : MonoBehaviour {
                 } else {
                     speed = rightSpeed;
                 }
-
                 MotionVector = RemoveYCoordinate(ForwardTransform.forward).normalized * speed * Time.deltaTime;
             }
         }
-
-        Debug.Log(MotionVector);
 
         MotionVector = Vector3.Lerp(MotionVector, Vector3.zero, Smoothness);
         PlayerCharacterController.Move(MotionVector);

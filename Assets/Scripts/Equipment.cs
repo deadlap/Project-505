@@ -8,6 +8,7 @@ public class Equipment : MonoBehaviour {
 
 
     [SerializeField] GameObject BaseLocation;
+    [SerializeField] Vector3 BaseLocationVec;
     // [SerializeField]  BaseRotation;
     [SerializeField] bool Equipped;
     [SerializeField] float Speed;
@@ -16,8 +17,9 @@ public class Equipment : MonoBehaviour {
 
     void Start() {
         // RB = GetComponent<Rigidbody>();)
+        BaseLocationVec = Vector3.zero;
     }
-    void Disable(){
+    public void DisableEquipment(){
 
     }
     void Update() {
@@ -29,8 +31,11 @@ public class Equipment : MonoBehaviour {
             transform.position = BaseLocation.transform.position;
             transform.rotation = BaseLocation.transform.rotation;
             RB.velocity = Vector3.zero;
-            Disable();
         }
+        if (!Equipped) {
+            DisableEquipment();
+        }
+
     	// RB.useGravity = Equipped;
     }
 }

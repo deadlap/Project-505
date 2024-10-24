@@ -15,4 +15,7 @@ public class FlashLight : Equipment {
     public void ToggleFlashlight(ActivateEventArgs arg){
         Light.SetActive(!Light.activeSelf);
     }
+    public new void DisableEquipment(){
+        Light.SetActive(false);
+    }
 }
