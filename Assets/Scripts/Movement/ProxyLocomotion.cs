@@ -62,23 +62,23 @@ public class ProxyLocomotion : MonoBehaviour {
 
         if (MovementType == 2) {
             if (leftHandVelocity >= SwingThreshold && rightHandVelocity >= SwingThreshold && fixedVectorThing.magnitude > 0.25) {
-                // speed =  getSpeed(leftHandVelocity);
-                speed = MovementSpeed;
+                speed =  getSpeed(leftHandVelocity);
+                // speed = MovementSpeed;
                 MotionVector = leftHandValue * speed * Time.deltaTime;
             }
         } else if (MovementType == 3) {
             if ((leftHandVelocity >= SwingThreshold && LeftControllerTrigger.action?.ReadValue<float>() > 0)
                 || (rightHandVelocity >= SwingThreshold && RightControllerTrigger.action?.ReadValue<float>() > 0)) {
-                // float leftSpeed = getSpeed(leftHandVelocity);
-                // float rightSpeed = getSpeed(rightHandVelocity);
-                speed = MovementSpeed;
-                // if (RightControllerTrigger.action?.ReadValue<float>() > 0 && LeftControllerTrigger.action?.ReadValue<float>() > 0){
-                //     speed = leftSpeed/rightSpeed;
-                // } else if (LeftControllerTrigger.action?.ReadValue<float>() > 0) {
-                //     speed = leftSpeed;
-                // } else {
-                //     speed = rightSpeed;
-                // }
+                float leftSpeed = getSpeed(leftHandVelocity);
+                float rightSpeed = getSpeed(rightHandVelocity);
+                // speed = MovementSpeed;
+                if (RightControllerTrigger.action?.ReadValue<float>() > 0 && LeftControllerTrigger.action?.ReadValue<float>() > 0){
+                    speed = leftSpeed/rightSpeed;
+                } else if (LeftControllerTrigger.action?.ReadValue<float>() > 0) {
+                    speed = leftSpeed;
+                } else {
+                    speed = rightSpeed;
+                }
                 MotionVector = RemoveYCoordinate(ForwardTransform.forward).normalized * speed * Time.deltaTime;
             }
         }
