@@ -1182,7 +1182,7 @@ MonoBehaviour:
   BaseLocation: {fileID: 639201293}
   BaseLocationVec: {x: 0, y: 0, z: 0}
   Equipped: 0
-  Speed: 0.5
+  Speed: 0.35
   DistanceThreshold: 0.125
   RB: {fileID: 228788722}
   Light: {fileID: 715262986}
@@ -2848,7 +2848,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.6
+  m_Intensity: 4
   m_Range: 10
   m_SpotAngle: 54.20528
   m_InnerSpotAngle: 29.191992
@@ -9556,9 +9556,9 @@ MonoBehaviour:
   RightHand: {fileID: 2869676290544412583}
   NormalMove: {fileID: 7211976698745786758}
   ForwardTransform: {fileID: 4576246155616750503}
-  SwingThreshold: 0.03
-  MovementSpeed: 3
-  Smoothness: 0.1
+  SwingThreshold: 0.02
+  MovementSpeed: 3.2
+  Smoothness: 0.05
   MovementType: 1
   MaxSwingSpeed: 0.06
   LeftJoystickInput:
