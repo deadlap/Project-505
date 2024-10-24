@@ -38,8 +38,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _MaxDistance: 10
-    - _MinDistance: 5
+    - _MaxDistance: 25
+    - _MinDistance: 10
     - _NoiseScale: 15
     - _NoiseSpeed: 0.1
     m_Colors:
