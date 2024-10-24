@@ -21,7 +21,7 @@ public class ProxyLocomotion : MonoBehaviour {
     [SerializeField] float MovementSpeed; //How fast the user should move;
     [SerializeField] float Smoothness;
     [SerializeField] int MovementType; //1 is normal controller, 3 is holding buttons down and swinging arms, 2 is nikolajs suggestion.
-    [SerializeField] float MaxSwingSpeed;
+    [SerializeField] float MaxSwingSpeed; //0.09
     
     private Vector3 MotionVector;
     //Vector3 Positions for previous hand positions
