@@ -7,7 +7,6 @@ public class LocomotionSwitcher : MonoBehaviour {
     [SerializeField] int locomotionType;
     [SerializeField] GameObject Light;
     void OnTriggerEnter(Collider other) {
-        Debug.Log("hej");
         if (other.CompareTag("Hand")) {
             proxyLocomotion.ChangeLocomotionType(locomotionType);
             Light.SetActive(true);
