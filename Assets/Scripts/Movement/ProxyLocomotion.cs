@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
-using UnityEditor.Experimental.GraphView;
-using Unity.VisualScripting;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
 public class ProxyLocomotion : MonoBehaviour {
