@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17691764, g: 0.22146405, b: 0.3037457, a: 1}
+  m_IndirectSpecularColor: {r: 0.17691725, g: 0.2214634, b: 0.3037444, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -154,6 +154,134 @@ Transform:
   m_Children: []
   m_Father: {fileID: 515366414}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &77049036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 77049037}
+  - component: {fileID: 77049039}
+  - component: {fileID: 77049038}
+  m_Layer: 0
+  m_Name: SeeThroughFog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &77049037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77049036}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5947773731204857921}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &77049038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77049036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 1
+  m_Cameras: []
+  m_RendererIndex: 0
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 4096
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 0
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
+--- !u!20 &77049039
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77049036}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.01
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4096
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &86231129
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +293,7 @@ GameObject:
   - component: {fileID: 86231130}
   - component: {fileID: 86231132}
   - component: {fileID: 86231131}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +413,7 @@ GameObject:
   - component: {fileID: 117329353}
   - component: {fileID: 117329352}
   - component: {fileID: 117329351}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Checkpoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +600,7 @@ GameObject:
   - component: {fileID: 147942107}
   - component: {fileID: 147942106}
   - component: {fileID: 147942105}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Checkpoint (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1267,7 +1395,7 @@ GameObject:
   - component: {fileID: 240150011}
   - component: {fileID: 240150010}
   - component: {fileID: 240150009}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Checkpoint (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1386,7 +1514,7 @@ GameObject:
   - component: {fileID: 290970198}
   - component: {fileID: 290970197}
   - component: {fileID: 290970196}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Checkpoint (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1503,7 +1631,7 @@ GameObject:
   - component: {fileID: 361670225}
   - component: {fileID: 361670227}
   - component: {fileID: 361670226}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1798,7 +1926,7 @@ GameObject:
   - component: {fileID: 457367337}
   - component: {fileID: 457367336}
   - component: {fileID: 457367335}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Checkpoint (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2305,7 +2433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 555987137}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CheckPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2416,7 +2544,7 @@ GameObject:
   - component: {fileID: 598141122}
   - component: {fileID: 598141124}
   - component: {fileID: 598141123}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2534,7 +2662,7 @@ GameObject:
   - component: {fileID: 620843648}
   - component: {fileID: 620843650}
   - component: {fileID: 620843649}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2654,7 +2782,7 @@ GameObject:
   - component: {fileID: 634256426}
   - component: {fileID: 634256425}
   - component: {fileID: 634256428}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Checkpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3611,7 +3739,7 @@ GameObject:
   - component: {fileID: 964952877}
   - component: {fileID: 964952876}
   - component: {fileID: 964952875}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Checkpoint (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3730,7 +3858,7 @@ GameObject:
   - component: {fileID: 982452983}
   - component: {fileID: 982452982}
   - component: {fileID: 982452981}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Checkpoint (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4139,7 +4267,7 @@ GameObject:
   - component: {fileID: 1079306799}
   - component: {fileID: 1079306801}
   - component: {fileID: 1079306800}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4400,7 +4528,7 @@ GameObject:
   - component: {fileID: 1137747749}
   - component: {fileID: 1137747748}
   - component: {fileID: 1137747747}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Checkpoint (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6050,7 +6178,7 @@ GameObject:
   - component: {fileID: 1529778198}
   - component: {fileID: 1529778197}
   - component: {fileID: 1529778196}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Checkpoint (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6272,7 +6400,7 @@ GameObject:
   - component: {fileID: 1575846423}
   - component: {fileID: 1575846425}
   - component: {fileID: 1575846424}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6508,7 +6636,7 @@ GameObject:
   - component: {fileID: 1618046759}
   - component: {fileID: 1618046761}
   - component: {fileID: 1618046760}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6915,7 +7043,7 @@ GameObject:
   - component: {fileID: 1706242885}
   - component: {fileID: 1706242887}
   - component: {fileID: 1706242886}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7881,7 +8009,7 @@ GameObject:
   - component: {fileID: 1954824603}
   - component: {fileID: 1954824605}
   - component: {fileID: 1954824604}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8312,7 +8440,7 @@ GameObject:
   - component: {fileID: 2073974332}
   - component: {fileID: 2073974334}
   - component: {fileID: 2073974333}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9447,7 +9575,8 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
-  m_Cameras: []
+  m_Cameras:
+  - {fileID: 77049039}
   m_RendererIndex: 1
   m_VolumeLayerMask:
     serializedVersion: 2
@@ -9491,6 +9620,7 @@ Transform:
   - {fileID: 6601753934694812296}
   - {fileID: 4576246155616750503}
   - {fileID: 1544278992}
+  - {fileID: 77049037}
   m_Father: {fileID: 8058875060343800932}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6092285493618603655
@@ -9757,7 +9887,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1847
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
