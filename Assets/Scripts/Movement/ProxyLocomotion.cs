@@ -31,7 +31,6 @@ public class ProxyLocomotion : MonoBehaviour {
     [SerializeField] private InputActionProperty LeftJoystickInput;
     [SerializeField] private InputActionProperty LeftControllerTrigger;
     [SerializeField] private InputActionProperty RightControllerTrigger;
-    bool lastFrameMoved;
 
     void Start() {
         PreviousLeftHandPosition = RemoveXCoordinate(LeftHand.transform.localPosition); //set previous positions
@@ -62,27 +61,19 @@ public class ProxyLocomotion : MonoBehaviour {
         Vector3 leftHandValue = ForwardTransform.TransformDirection(fixedVectorThing);
 
         if (MovementType == 2) {
-            if (leftHandVelocity >= SwingThreshold && fixedVectorThing.magnitude > 0.25) {
-                // speed =  getSpeed(leftHandVelocity);
-                speed = MovementSpeed;
-                MotionVector = leftHandValue * speed * Time.deltaTime;
-                // lastFrameMoved = ;
-            } else {
-                lastFrameMoved = false;
-            }
-        } else if (MovementType == 3) {
             if ((leftHandVelocity >= SwingThreshold && LeftControllerTrigger.action?.ReadValue<float>() > 0)
                 || (rightHandVelocity >= SwingThreshold && RightControllerTrigger.action?.ReadValue<float>() > 0)) {
-                // float leftSpeed = getSpeed(leftHandVelocity);
-                // float rightSpeed = getSpeed(rightHandVelocity);
-                speed = MovementSpeed;
-                // if (RightControllerTrigger.action?.ReadValue<float>() > 0 && LeftControllerTrigger.action?.ReadValue<float>() > 0){
-                //     speed = leftSpeed/rightSpeed;
-                // } else if (LeftControllerTrigger.action?.ReadValue<float>() > 0) {
-                //     speed = leftSpeed;
-                // } else {
-                //     speed = rightSpeed;
-                // }
+                float leftSpeed = getSpeed(leftHandVelocity);
+                float rightSpeed = getSpeed(rightHandVelocity);
+                // speed = MovementSpeed;
+                if (RightControllerTrigger.action?.ReadValue<float>() > 0 && LeftControllerTrigger.action?.ReadValue<float>() > 0){
+                    speed = (leftSpeed+rightSpeed)/2;
+                } else if (LeftControllerTrigger.action?.ReadValue<float>() > 0) {
+                    speed = leftSpeed;
+                } else {
+                    speed = rightSpeed;
+                }
+
                 MotionVector = RemoveYCoordinate(ForwardTransform.forward).normalized * speed * Time.deltaTime;
             }
         }
@@ -108,8 +99,7 @@ public class ProxyLocomotion : MonoBehaviour {
         MovementType = type;
     }
     public float getSpeed(float handSpeed){
-        var clamped = Mathf.Clamp(Mathf.Clamp(handSpeed, SwingThreshold, MaxSwingSpeed)/MaxSwingSpeed,  0.1f, 0.9f);
-        var speed = Mathf.Sin(clamped*Mathf.PI)*MovementSpeed;
+        var speed = Mathf.Clamp(handSpeed, SwingThreshold, MaxSwingSpeed)/MaxSwingSpeed*MovementSpeed;
         return (float)speed;
     }
 }
