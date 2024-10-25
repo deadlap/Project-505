@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17691725, g: 0.2214634, b: 0.3037444, a: 1}
+  m_IndirectSpecularColor: {r: 0.1769172, g: 0.22146334, b: 0.3037445, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1211,6 +1211,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rockLP005
       objectReference: {fileID: 0}
+    - target: {fileID: 837594476835956513, guid: c77f4b97e34f7c249b7f20f5535047db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6852170749812896577, guid: c77f4b97e34f7c249b7f20f5535047db,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1928,6 +1933,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rockLP002
+      objectReference: {fileID: 0}
+    - target: {fileID: 812558477146167923, guid: 7df9b6337bee57443ac33f308b60a73a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4696744224261136125, guid: 7df9b6337bee57443ac33f308b60a73a,
         type: 3}
@@ -5287,6 +5297,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rockLP003
       objectReference: {fileID: 0}
+    - target: {fileID: 8363083339021904860, guid: d108efa070112dc45bbeb34f6a965245,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5925,6 +5940,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rockLP006
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032141050593019228, guid: 9d44575d453b7cb4189eafd14c243601,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2324316360554349189, guid: 9d44575d453b7cb4189eafd14c243601,
         type: 3}
@@ -7674,6 +7694,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rockLP004
+      objectReference: {fileID: 0}
+    - target: {fileID: 8360427674123722211, guid: f871148126e812b44baec107c442f424,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
