@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.057938762, g: 0.3962264, b: 0.16416645, a: 1}
+  m_FogColor: {r: 0.17332682, g: 0.38679248, b: 0.37217155, a: 1}
   m_FogMode: 2
   m_FogDensity: 0.1
   m_LinearFogStart: 0
@@ -228,8 +228,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.6603774, g: 0.63482887, b: 0.034264866, a: 1}
-  m_Intensity: 39
-  m_Range: 8
+  m_Intensity: 50
+  m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -307,7 +307,7 @@ Transform:
   m_GameObject: {fileID: 117329349}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.76, y: 9.64, z: 15.72}
+  m_LocalPosition: {x: -26.76, y: 9.66, z: 15.72}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1571,8 +1571,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.6603774, g: 0.63482887, b: 0.034264866, a: 1}
-  m_Intensity: 39
-  m_Range: 8
+  m_Intensity: 50
+  m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -2489,8 +2489,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.6603774, g: 0.63482887, b: 0.034264866, a: 1}
-  m_Intensity: 39
-  m_Range: 8
+  m_Intensity: 50
+  m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -2607,8 +2607,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.6603774, g: 0.63482887, b: 0.034264866, a: 1}
-  m_Intensity: 39
-  m_Range: 8
+  m_Intensity: 50
+  m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -2686,7 +2686,7 @@ Transform:
   m_GameObject: {fileID: 634256423}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.1, y: 9.39, z: 38.8}
+  m_LocalPosition: {x: -27.1, y: 9.56, z: 38.8}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4212,8 +4212,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.6603774, g: 0.63482887, b: 0.034264866, a: 1}
-  m_Intensity: 39
-  m_Range: 8
+  m_Intensity: 50
+  m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -6355,8 +6355,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.6603774, g: 0.63482887, b: 0.034264866, a: 1}
-  m_Intensity: 39
-  m_Range: 8
+  m_Intensity: 50
+  m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -6591,8 +6591,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.6603774, g: 0.63482887, b: 0.034264866, a: 1}
-  m_Intensity: 39
-  m_Range: 8
+  m_Intensity: 50
+  m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -6998,8 +6998,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.6603774, g: 0.63482887, b: 0.034264866, a: 1}
-  m_Intensity: 39
-  m_Range: 8
+  m_Intensity: 50
+  m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -8075,8 +8075,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.6603774, g: 0.63482887, b: 0.034264866, a: 1}
-  m_Intensity: 39
-  m_Range: 8
+  m_Intensity: 50
+  m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -8506,8 +8506,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.6603774, g: 0.63482887, b: 0.034264866, a: 1}
-  m_Intensity: 39
-  m_Range: 8
+  m_Intensity: 50
+  m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
