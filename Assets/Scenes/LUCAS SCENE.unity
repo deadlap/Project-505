@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1769172, g: 0.22146334, b: 0.3037445, a: 1}
+  m_IndirectSpecularColor: {r: 0.17691764, g: 0.22146405, b: 0.3037457, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3468,7 +3468,7 @@ Transform:
   m_GameObject: {fileID: 876228308}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.000000013634688, w: 1}
-  m_LocalPosition: {x: -0.293, y: 0.292, z: -0}
+  m_LocalPosition: {x: -0.293, y: 0.292, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7976,7 +7976,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1951898127
 Transform:
   m_ObjectHideFlags: 0
@@ -7986,13 +7986,13 @@ Transform:
   m_GameObject: {fileID: 1951898126}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.1175995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 228788720}
   - {fileID: 639201294}
-  m_Father: {fileID: 8058875060343800932}
+  m_Father: {fileID: 83573330644330771}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1951898128
 MonoBehaviour:
@@ -8967,6 +8967,7 @@ Transform:
   m_Children:
   - {fileID: 8058875060343800932}
   - {fileID: 1392143834}
+  - {fileID: 1951898127}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &608363585420360689
@@ -9778,7 +9779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 3905241303391452471}
-  m_MoveSpeed: 2.5
+  m_MoveSpeed: 2
   m_EnableStrafe: 1
   m_EnableFly: 0
   m_UseGravity: 0
@@ -9905,7 +9906,6 @@ Transform:
   - {fileID: 5947773731204857921}
   - {fileID: 8650207103995355520}
   - {fileID: 6285618654482349985}
-  - {fileID: 1951898127}
   m_Father: {fileID: 83573330644330771}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8192473449402270203
@@ -10013,7 +10013,7 @@ MonoBehaviour:
   NormalMove: {fileID: 7211976698745786758}
   ForwardTransform: {fileID: 4576246155616750503}
   SwingThreshold: 0.02
-  MovementSpeed: 3.2
+  MovementSpeed: 3.3
   Smoothness: 0.05
   MovementType: 1
   MaxSwingSpeed: 0.06
