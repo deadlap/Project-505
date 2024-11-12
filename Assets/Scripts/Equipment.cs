@@ -18,10 +18,14 @@ public class Equipment : MonoBehaviour {
     void Start() {
         // RB = GetComponent<Rigidbody>();)
         BaseLocationVec = Vector3.zero;
+        // XRGrabInteractable equipmentGrabbable = ;
+        GetComponent<XRGrabInteractable>().selectExited.AddListener(OnSelectExited);
     }
-    public void DisableEquipment(){
 
+    void OnSelectExited(SelectExitEventArgs arg){
+        DisableEquipment();
     }
+    public virtual void DisableEquipment(){}
     void Update() {
         if (!Equipped && Vector3.Distance(transform.position, BaseLocation.transform.position) > DistanceThreshold) {
             transform.position = Vector3.Lerp(transform.position, BaseLocation.transform.position, Speed);
@@ -32,9 +36,9 @@ public class Equipment : MonoBehaviour {
             transform.rotation = BaseLocation.transform.rotation;
             RB.velocity = Vector3.zero;
         }
-        if (!Equipped) {
-            DisableEquipment();
-        }
+        // if (!Equipped) {
+        //     DisableEquipment();
+        // }
 
     	// RB.useGravity = Equipped;
     }
