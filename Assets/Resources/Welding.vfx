@@ -12,15 +12,174 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d01270efd3285ea4a9d6c555cb0a8027, type: 3}
   m_Name: VFXUI
   m_EditorClassIdentifier: 
-  groupInfos: []
+  groupInfos:
+  - title: Boubles
+    position:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 100
+      height: 100
+    contents:
+    - model: {fileID: 8926484042661615220}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615222}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615225}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615240}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615252}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615256}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615258}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615261}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615263}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615267}
+      id: 0
+      isStickyNote: 0
+  - title: Light Source
+    position:
+      serializedVersion: 2
+      x: 1134
+      y: 2729
+      width: 773
+      height: 2044
+    contents:
+    - model: {fileID: 8926484042661615161}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615163}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615454}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615461}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615166}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615181}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615185}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615465}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615195}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615197}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615202}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615208}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615484}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615200}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615214}
+      id: 0
+      isStickyNote: 0
+  - title: Welding Sparks
+    position:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 100
+      height: 100
+    contents:
+    - model: {fileID: 8926484042661615270}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615272}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615275}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615290}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615302}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615305}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615309}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615311}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615332}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615336}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615339}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615354}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615356}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615358}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615361}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615363}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615384}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615387}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615389}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661615392}
+      id: 0
+      isStickyNote: 0
   stickyNoteInfos: []
   categories: []
   uiBounds:
     serializedVersion: 2
-    x: 930
-    y: 2846
-    width: 3389
-    height: 1900
+    x: 1134
+    y: 2729
+    width: 3209
+    height: 2044
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,7 +275,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615163}
   - {fileID: 8926484042661615454}
   - {fileID: 8926484042661615461}
-  m_UIPosition: {x: 1458, y: 2846}
+  m_UIPosition: {x: 1458, y: 2788}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -1747,7 +1906,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661615215}
       inputSlot: {fileID: 8926484042661615209}
-    position: {x: 929.60004, y: 4473.5996}
+    position: {x: 1159, y: 4419}
     expandedSlots:
     - {fileID: 8926484042661615215}
     expanded: 1
@@ -1938,7 +2097,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children:
   - {fileID: 8926484042661615222}
-  m_UIPosition: {x: 1993, y: 2945}
+  m_UIPosition: {x: 2271, y: 2932}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -2085,7 +2244,7 @@ MonoBehaviour:
   m_Children:
   - {fileID: 8926484042661615240}
   - {fileID: 8926484042661615252}
-  m_UIPosition: {x: 1993, y: 3273}
+  m_UIPosition: {x: 2271, y: 3260}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -3123,7 +3282,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 1994, y: 3706}
+  m_UIPosition: {x: 2272, y: 3693}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -3161,7 +3320,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615261}
   - {fileID: 8926484042661615263}
   - {fileID: 8926484042661615267}
-  m_UIPosition: {x: 1993, y: 3890}
+  m_UIPosition: {x: 2271, y: 3877}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -3311,7 +3470,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 8926484042661615258}
   m_Children: []
-  m_UIPosition: {x: 0, y: 90}
+  m_UIPosition: {x: 0, y: 91}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
