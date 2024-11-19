@@ -2151,7 +2151,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: True
+      m_SerializableObject: False
     m_Space: 2147483647
   m_Property:
     name: _vfx_enabled
@@ -2721,7 +2721,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":-0.033250000327825549,"y":0.07999999821186066,"z":-0.033250000327825549}}'
+      m_SerializableObject: '{"vector":{"x":-0.033250000327825549,"y":0.10999999940395355,"z":-0.033250000327825549}}'
     m_Space: 0
   m_Property:
     name: A
@@ -2891,7 +2891,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":0.033250000327825549,"y":0.11999999731779099,"z":0.033250000327825549}}'
+      m_SerializableObject: '{"vector":{"x":0.033250000327825549,"y":0.15000000596046449,"z":0.033250000327825549}}'
     m_Space: 0
   m_Property:
     name: B
@@ -3444,7 +3444,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.AnimationCurve, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"frames":[{"time":0.06666946411132813,"value":0.074951171875,"inTangent":-0.08175532519817352,"outTangent":-0.08175532519817352,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false},{"time":0.9439544677734375,"value":0.003228450194001198,"inTangent":-0.08175532519817352,"outTangent":-0.08175532519817352,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false}],"preWrapMode":8,"postWrapMode":8,"version":1}'
+      m_SerializableObject: '{"frames":[{"time":0.000003814697265625,"value":0.012847900390625,"inTangent":-0.009670569561421872,"outTangent":-0.009670569561421872,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false},{"time":0.9957749843597412,"value":0.0032182259019464256,"inTangent":-0.009670569561421872,"outTangent":-0.009670569561421872,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false}],"preWrapMode":8,"postWrapMode":8,"version":1}'
     m_Space: 2147483647
   m_Property:
     name: Size
@@ -4293,7 +4293,7 @@ MonoBehaviour:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       m_SerializableObject: '{"vector":{"x":-0.20000000298023225,"y":-0.10000000149011612,"z":-0.20000000298023225}}'
-    m_Space: 1
+    m_Space: 0
   m_Property:
     name: A
     m_serializedType:
@@ -4463,7 +4463,7 @@ MonoBehaviour:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       m_SerializableObject: '{"vector":{"x":0.30000001192092898,"y":0.10000000149011612,"z":0.30000001192092898}}'
-    m_Space: 1
+    m_Space: 0
   m_Property:
     name: B
     m_serializedType:
@@ -8594,7 +8594,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0.1
+      m_SerializableObject: 0.63
     m_Space: 2147483647
   m_Property:
     name: Drag
