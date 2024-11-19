@@ -31,6 +31,7 @@ public class Welder : Equipment {
 
     public void ToggleCurrentlyWelding(bool toggle){
         // IsWelding = toggle;
-        WeldingEffect.SetActive(toggle);
+        if (Activated)
+            WeldingEffect.SetActive(toggle);
     }
 }
