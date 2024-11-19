@@ -10,9 +10,9 @@ public class Welder : Equipment {
     public bool Activated {get; private set;}
     void Start() {
         // Light.SetActive(false);
-        XRGrabInteractable flashlightGrabbable = GetComponent<XRGrabInteractable>();
-        flashlightGrabbable.activated.AddListener(EnableWelder);
-        flashlightGrabbable.deactivated.AddListener(DisableEquipmentOnEvent);
+        XRGrabInteractable welderGrabbable = GetComponent<XRGrabInteractable>();
+        welderGrabbable.activated.AddListener(EnableWelder);
+        welderGrabbable.deactivated.AddListener(DisableEquipmentOnEvent);
     }
 
     public void EnableWelder(ActivateEventArgs arg){
