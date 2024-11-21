@@ -125,6 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canFishMove: 1
   directMovement: 1
+  animationSpeed: 3
   moveSpeed: 10
   rotationSpeed: 1.5
   movePoints:
