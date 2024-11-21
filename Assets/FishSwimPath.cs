@@ -4,14 +4,18 @@ using UnityEngine;
 public class FishSwimPath : MonoBehaviour
 {
     //Rigidbody rb;
+    MeshRenderer meshRenderer;
     [SerializeField] bool canFishMove;
     [SerializeField] bool directMovement;
+    [SerializeField] float animationSpeed;
     [SerializeField] float moveSpeed;
     [SerializeField] float rotationSpeed;
     [SerializeField] Transform[] movePoints;
     int target;
+    
     void Start()
     {
+        meshRenderer = GetComponentInChildren<MeshRenderer>();
         transform.position = movePoints[0].position;
         //rb = GetComponent<Rigidbody>();
         target = 0;
@@ -20,6 +24,7 @@ public class FishSwimPath : MonoBehaviour
     void Update()
     {
         if (!canFishMove) return;
+        meshRenderer.material.SetFloat("_WaveSpeed", animationSpeed);
         var relativePos = movePoints[target].position - transform.position;
         var targetRotation = Quaternion.LookRotation(relativePos);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
