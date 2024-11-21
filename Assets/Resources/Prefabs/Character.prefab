@@ -797,6 +797,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DivingHelmet_Low
       objectReference: {fileID: 0}
+    - target: {fileID: 3468312495162931629, guid: 14aedadaa9afa6b4aae4264c7393ce43,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4281299791990514455, guid: 14aedadaa9afa6b4aae4264c7393ce43,
         type: 3}
       propertyPath: m_LocalScale.y
