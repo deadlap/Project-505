@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using Unity.Mathematics;
 using System.Numerics;
-
+using UnityEngine.XR.Content.Interaction;
 public class Gauge : MonoBehaviour {
 
     // public static event Action<string> ReceiveSpecialSignEvent;
@@ -23,6 +23,7 @@ public class Gauge : MonoBehaviour {
 
     void Start() {
         GaugeValue = 0;
+        // ValveValues = new List<float>(){0,0,0};
     }
 
     void Update() {
@@ -30,6 +31,7 @@ public class Gauge : MonoBehaviour {
 
     void FixedUpdate(){
         float randomNoise = UnityEngine.Random.Range(-noise,noise);
+        
         Pin.transform.localEulerAngles = new UnityEngine.Vector3(0f, GaugeValue*360f+randomNoise, 0f);
     }
 
@@ -44,10 +46,14 @@ public class Gauge : MonoBehaviour {
         if (GaugeValue > CorrectGauge-GaugeThreshold && GaugeValue < CorrectGauge+GaugeThreshold){
             Completed = true;
             DisableValves();
+            CompletePuzzle();
         }
     }
 
     void DisableValves(){
+        foreach (Valve valve in Valves) {
+            valve.gameObject.GetComponent<XRKnob>().enabled = false;
+        }
         //do foreach loop to disable wheel spinning thing;
     }
 

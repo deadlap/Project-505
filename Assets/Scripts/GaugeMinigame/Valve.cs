@@ -4,29 +4,26 @@ using UnityEngine;
 
 public class Valve : MonoBehaviour
 {
-    [SerializeField] float MaxCorrectValue;
-    [SerializeField] float MinCorrectValue;
-    float MaxOutput;
-    int ID;
+    [SerializeField] float CorrectValue;
+    // [SerializeField] float Threshold;
+    [SerializeField] float MaxOutput;
+    [SerializeField] int ID;
     [SerializeField] Gauge Gauge;
 
-    void Start(){
-        MaxOutput = 0.33f;
-    }
-
     public void ChangeValue(float input){
-        float input_ = (float)input; Debug.Log(input);
+        // if (input < 1) 
+        //     input = input % 1;
+        
         float output = 0;
-        if (input_ < MinCorrectValue) {
-            output = MaxOutput * (MinCorrectValue/input_);
-        } else if (input_ > MaxCorrectValue) {
-            output = MaxOutput * (input_/MaxCorrectValue);
+        if (input < CorrectValue) {
+            output = MaxOutput * (input/CorrectValue);
+        } else if (input > CorrectValue) {
+            output = MaxOutput * (CorrectValue/(input));
         } else {
             output = MaxOutput;
         }
+        Debug.Log("output" + output);
         Gauge.ChangeGaugeValue(ID, output);
-
-        // float newValue = (float)input/();
     }
 
 }
