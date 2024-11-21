@@ -7,6 +7,7 @@ public class Valve : MonoBehaviour
     [SerializeField] float MaxCorrectValue;
     [SerializeField] float MinCorrectValue;
     float MaxOutput;
+    int ID;
     [SerializeField] Gauge Gauge;
 
     void Start(){
@@ -23,7 +24,7 @@ public class Valve : MonoBehaviour
         } else {
             output = MaxOutput;
         }
-        Gauge.ChangeGaugeValue(output);
+        Gauge.ChangeGaugeValue(ID, output);
 
         // float newValue = (float)input/();
     }
