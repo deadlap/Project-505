@@ -18,6 +18,11 @@ public class WeldingContact : MonoBehaviour {
             WelderGun.ToggleCurrentlyWelding(true);
         }
     }
+    void OnTriggerStay(Collider other) {
+        if (other.CompareTag("WeldingSpot")) {
+            WelderGun.ToggleCurrentlyWelding(true);
+        }
+    }
     void OnTriggerExit(Collider other) {
         if (other.CompareTag("WeldingSpot")) {
             WelderGun.ToggleCurrentlyWelding(false);
