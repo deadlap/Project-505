@@ -91,7 +91,7 @@ MonoBehaviour:
   maxSpeed: 3
   minNeighbourDistance: 0.5
   maxNeighbourDistance: 5
-  rotationalSpeed: 10
+  rotationalSpeed: 5
   newGoalChance: 0.2
   speedNullChance: 0.4
   flockChance: 0.2

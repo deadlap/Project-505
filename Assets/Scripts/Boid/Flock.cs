@@ -9,6 +9,7 @@ public class Flock : MonoBehaviour
     [HideInInspector] protected float speed;
     private Transform[] fishies = null;
     private float lastReset = 0f;
+    private int groupSize = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class Flock : MonoBehaviour
         List<Transform> allFishes = new List<Transform>();
         foreach (GameObject fish in myManager.fishies)
         {
-            if (fish == this) continue;
+            if (fish == gameObject) continue;
             allFishes.Add(fish.transform);
         }
         fishies = allFishes.ToArray();
@@ -30,6 +31,34 @@ public class Flock : MonoBehaviour
     void Update()
     {
         if (Random.Range(0f, 1f) < myManager.flockChance) ApplyRules();
+
+        if (groupSize < 1) // If swimming solo, make sure not to leave bounds
+        {
+            Vector3 targetDirection = Vector3.zero;
+
+            // If too high, begin looking down
+            if (transform.position.y > myManager.areaCorner2.position.y)
+                targetDirection += Vector3.down;
+            else if (transform.position.y < myManager.areaCorner1.position.y) // Vice versa, begin looking up
+                targetDirection += Vector3.up;
+
+            // If too far right, begin looking left
+            if (transform.position.x > myManager.areaCorner2.position.x)
+                targetDirection += Vector3.left;
+            else if (transform.position.x < myManager.areaCorner1.position.x) // Vice versa, begin looking right
+                targetDirection += Vector3.right;
+
+            // If too forward, begin looking back
+            if (transform.position.z > myManager.areaCorner2.position.z)
+                targetDirection += Vector3.back;
+            else if (transform.position.z < myManager.areaCorner1.position.z) // Vice versa, begin looking forward
+                targetDirection += Vector3.forward;
+
+            // Turn that direction
+            if (targetDirection != Vector3.zero)
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetDirection), myManager.rotationalSpeed * Time.deltaTime);
+        }
+
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
@@ -47,13 +76,14 @@ public class Flock : MonoBehaviour
 
         float groupSpeed = 0.01f;
         float neighbourDistance;
-        int groupSize = 0;
+        groupSize = 0;
 
         foreach (Transform fish in fishies)
         {
             neighbourDistance = Vector3.Distance(fish.position, transform.position);
-            
+
             if (neighbourDistance > myManager.maxNeighbourDistance) continue; // If fish is too far, ignore it
+
             groupSize++; // Know the group size
             
             centre += fish.position; // Get centre
@@ -63,7 +93,7 @@ public class Flock : MonoBehaviour
             groupSpeed += fish.GetComponent<Flock>().speed;
         }
 
-        if (groupSize <= 0) return;
+        if (groupSize < 1) return;
 
         centre /= groupSize;
         goal = myManager.goalPosition - transform.position;
