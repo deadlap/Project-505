@@ -1177,6 +1177,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117329349}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &119928408 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1559499398505544555, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 4610793683582557862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &119928412 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7360402779368324460, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 4610793683582557862}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acee9f5aa937fd94dacd1f31651c2b8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &137475757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1209,6 +1227,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1538682876}
+  - {fileID: 119928408}
   - {fileID: 1426119834}
   - {fileID: 582516420}
   - {fileID: 168290305}
@@ -15395,12 +15414,12 @@ GameObject:
   - component: {fileID: 1426119836}
   - component: {fileID: 1426119835}
   m_Layer: 0
-  m_Name: Weldergun
+  m_Name: OLD_Weldergun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1426119834
 Transform:
   m_ObjectHideFlags: 0
@@ -17644,6 +17663,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weldPrefab: {fileID: 0}
+  weldHeight: 0.01
+  minScale: 0
+  maxScale: 0
+  testWeld: 0
 --- !u!114 &1603559746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21734,6 +21758,129 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5947773731204857921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4610793683582557862
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 137475758}
+    m_Modifications:
+    - target: {fileID: 1115049617153670512, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115049617153670512, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.098
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115049617153670512, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115049617153670512, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6123724
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115049617153670512, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6123724
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115049617153670512, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.35355344
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115049617153670512, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.35355344
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115049617153670512, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115049617153670512, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559499398505544555, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0519
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559499398505544555, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.089599594
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559499398505544555, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.09590004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559499398505544555, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559499398505544555, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -8.881784e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559499398505544555, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559499398505544555, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 8.881784e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559499398505544555, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559499398505544555, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559499398505544555, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2229181605940552145, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_Name
+      value: WeldingTorch
+      objectReference: {fileID: 0}
+    - target: {fileID: 7054889197572456944, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: WelderGun
+      value: 
+      objectReference: {fileID: 119928412}
+    - target: {fileID: 7360402779368324460, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: BaseLocation
+      value: 
+      objectReference: {fileID: 168290304}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0fadcf2211506c648bb2e93d0813b6ee, type: 3}
 --- !u!1 &4924272418383762032
 GameObject:
   m_ObjectHideFlags: 0
