@@ -12,8 +12,8 @@ public class FlockManager : MonoBehaviour
     [SerializeField, Tooltip("What the flock swims towards when customGoal is true")] private Transform goalTransform;
     [HideInInspector] public Vector3 goalPosition = Vector3.zero;
     [Space(5f), Header("Swim area")]
-    [SerializeField] private Transform areaCorner1;
-    [SerializeField] private Transform areaCorner2;
+    [SerializeField] public Transform areaCorner1;
+    [SerializeField] public Transform areaCorner2;
 
     [Space(5f), Header("Fishies settings")]
     [SerializeField, Range(0f, 5f)] public float minSpeed = 0.2f;
@@ -33,6 +33,28 @@ public class FlockManager : MonoBehaviour
     [HideInInspector] public Vector3 averagePosition = Vector3.zero;
     [HideInInspector] public Vector3 averageHeading = Vector3.zero;
 
+    private void Awake()
+    {
+        // Swap values to make sure corner1 has all lower values that the other
+        if (areaCorner1.position.x > areaCorner2.position.x)
+        {
+            float tempValue = areaCorner1.position.x;
+            areaCorner1.position = new Vector3(areaCorner2.position.x, areaCorner1.position.y, areaCorner1.position.z);
+            areaCorner2.position = new Vector3(tempValue, areaCorner2.position.y, areaCorner2.position.z);
+        }
+        if (areaCorner1.position.y > areaCorner2.position.y)
+        {
+            float tempValue = areaCorner1.position.y;
+            areaCorner1.position = new Vector3(areaCorner1.position.x, areaCorner2.position.y, areaCorner1.position.z);
+            areaCorner2.position = new Vector3(areaCorner2.position.x, tempValue, areaCorner2.position.z);
+        }
+        if (areaCorner1.position.z > areaCorner2.position.z)
+        {
+            float tempValue = areaCorner1.position.z;
+            areaCorner1.position = new Vector3(areaCorner1.position.x, areaCorner1.position.y, areaCorner2.position.z);
+            areaCorner2.position = new Vector3(areaCorner2.position.x, areaCorner2.position.y, tempValue);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
