@@ -29,7 +29,7 @@ public class Flock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ApplyRules();
+        if (Random.Range(0f, 1f) < myManager.flockChance) ApplyRules();
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
@@ -69,11 +69,14 @@ public class Flock : MonoBehaviour
         goal = myManager.goalPosition - transform.position;
         groupSpeed /= groupSize;
 
+        centre -= -transform.position;
         centre *= myManager.gatherStrength;
+        avoid -= transform.position;
         avoid *= myManager.avoidStrength;
+        goal -= transform.position;
         goal *= myManager.goalStrength;
 
-        Vector3 targetDirection = (centre + goal + avoid) - transform.position;
+        Vector3 targetDirection = (centre + goal + avoid);
 
         if (!targetDirection.Equals(Vector3.zero))
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetDirection), myManager.rotationalSpeed * Time.deltaTime);

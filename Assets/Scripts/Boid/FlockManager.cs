@@ -20,11 +20,12 @@ public class FlockManager : MonoBehaviour
     [SerializeField, Range(0f, 5f)] public float maxSpeed = 0.7f;
     [SerializeField, Range(0f, 10f), Tooltip("Distance to fish before they start trying to avoid each other")] public float minNeighbourDistance = 1f;
     [SerializeField, Range(0f, 10f), Tooltip("Distance to furthest fish it considers part of its flock")] public float maxNeighbourDistance = 10f;
-    [SerializeField, Range(0.1f, 5f), Tooltip("How fast the fish can turn")] public float rotationalSpeed = 2.5f;
+    [SerializeField, Range(0.1f, 20f), Tooltip("How fast the fish can turn")] public float rotationalSpeed = 2.5f;
     [Header("Behaviour")]
     [SerializeField, Range(0f, 1f), Tooltip("Chance to set a new goal every second. Only applicable if customGoal is true")] private float newGoalChance = 0.1f;
     private float lastReset = 0f;
     [SerializeField, Range(0f, 1f), Tooltip("Chance to reset a given fish's speed every second. Gives more dynamic speeds to the fishes")] public float speedNullChance = 0.4f;
+    [SerializeField, Range(0f, 1f), Tooltip("Odds that fish actually run their flocking behaviour. Higher gives more flocking behaviour, but means worse performance")] public float flockChance = 0.1f;
     [SerializeField, Min(0f), Tooltip("How strongly the fish want to swim towards the centre of their pod")] public float gatherStrength = 1f;
     [SerializeField, Min(0f), Tooltip("How strongly the fish want to avoid hitting each other")] public float avoidStrength = 1f;
     [SerializeField, Min(0f), Tooltip("How strongly the fish want to swim towards their goal")] public float goalStrength = 1f;

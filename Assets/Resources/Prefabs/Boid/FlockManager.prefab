@@ -89,11 +89,15 @@ MonoBehaviour:
   areaCorner2: {fileID: 3118426890205394124}
   minSpeed: 1
   maxSpeed: 3
-  minNeighbourDistance: 1
-  maxNeighbourDistance: 10
-  rotationalSpeed: 2
+  minNeighbourDistance: 0.5
+  maxNeighbourDistance: 5
+  rotationalSpeed: 10
   newGoalChance: 0.2
   speedNullChance: 0.4
+  flockChance: 0.2
+  gatherStrength: 1
+  avoidStrength: 1.2
+  goalStrength: 1
   averagePosition: {x: 0, y: 0, z: 0}
   averageHeading: {x: 0, y: 0, z: 0}
 --- !u!1 &4492987115063157387
