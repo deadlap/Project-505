@@ -13,7 +13,7 @@ public class WeldingPoint : MonoBehaviour {
     [SerializeField] float minScale, maxScale;
     [SerializeField] bool testWeld;
 
-    public bool IsFixed {get; private set;}
+    public bool IsFixed;
     void Start() {
         IsFixed = false;
     }
