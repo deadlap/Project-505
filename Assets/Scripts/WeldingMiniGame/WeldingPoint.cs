@@ -29,7 +29,7 @@ public class WeldingPoint : MonoBehaviour {
         // Create a weld with a random size.
         if (IsFixed) return;
         GameObject newWeld = Instantiate(weldPrefab, transform.position, Quaternion.identity);
-        newWeld.transform.rotation = Quaternion.Euler(new Vector3(90,0,0));
+        newWeld.transform.rotation = transform.rotation;
         newWeld.transform.localScale = new Vector3(Random.Range(minScale, maxScale), weldHeight, Random.Range(minScale, maxScale));
         IsFixed = true;            
     }
