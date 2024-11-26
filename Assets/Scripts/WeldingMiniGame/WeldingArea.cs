@@ -5,7 +5,7 @@ using UnityEngine;
 public class WeldingArea : MonoBehaviour {
     [SerializeField] List<WeldingPoint> points;
     [SerializeField] GameObject GasBubbleVFX;
-    bool Completed;
+    public bool Completed;
 
     void Start() {
         for (int i = 0; i < transform.childCount; i++) {
