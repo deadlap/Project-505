@@ -778,6 +778,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92346336}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &110570280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4268402776188991742, guid: a2f02fab997e9ae499394042eee38dc4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1151713264}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &117329349
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,13 +931,14 @@ GameObject:
   m_Component:
   - component: {fileID: 137475758}
   - component: {fileID: 137475759}
+  - component: {fileID: 137475760}
   m_Layer: 0
   m_Name: Belt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &137475758
 Transform:
   m_ObjectHideFlags: 0
@@ -941,7 +948,7 @@ Transform:
   m_GameObject: {fileID: 137475757}
   serializedVersion: 2
   m_LocalRotation: {x: -0.005093968, y: -8.570925e-14, z: -9.521273e-13, w: 0.99998707}
-  m_LocalPosition: {x: 0, y: -98.06, z: 0.3}
+  m_LocalPosition: {x: 0, y: -1.1176, z: 0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -950,7 +957,7 @@ Transform:
   - {fileID: 1426119834}
   - {fileID: 582516420}
   - {fileID: 168290305}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 390221219}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &137475759
 MonoBehaviour:
@@ -965,6 +972,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1959178652}
+--- !u!114 &137475760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137475757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d601a4cbb67c27b41a48771635a2d250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Follow: {fileID: 110570280}
+  Offset: {x: 0, y: 0, z: 0.25}
 --- !u!1001 &146719067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2295,6 +2316,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1873572008}
+  - {fileID: 137475758}
   - {fileID: 1959178652}
   - {fileID: 881192603}
   - {fileID: 564574164}
@@ -5296,7 +5318,7 @@ MonoBehaviour:
   autoRepaint: 0
   terrainListeners: []
   bounds:
-    m_Center: {x: 0, y: 200, z: 0}
+    m_Center: {x: 0, y: 196.57, z: 0}
     m_Extent: {x: 250, y: 300, z: 250}
   filterShader: {fileID: 4800000, guid: 0f44df78e3d64d9cb2616cac3d84cb77, type: 3}
 --- !u!154 &835061422
@@ -13278,6 +13300,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WeldingTorch
       objectReference: {fileID: 0}
+    - target: {fileID: 2229181605940552145, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7054889197572456944, guid: 0fadcf2211506c648bb2e93d0813b6ee,
         type: 3}
       propertyPath: WelderGun
@@ -13390,4 +13417,3 @@ SceneRoots:
   - {fileID: 1771853630}
   - {fileID: 818272044}
   - {fileID: 1151713264}
-  - {fileID: 137475758}

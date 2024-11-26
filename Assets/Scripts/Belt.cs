@@ -12,8 +12,7 @@ public class Belt : MonoBehaviour {
         FaceCameraDirection();
     }
     void FaceCameraDirection() {
-    var rotation = new Vector3(camera.forward.x, 0, camera.forward.z);
-    transform.rotation =  Quaternion.LookRotation(rotation);
-
+        var rotation = new Vector3(camera.forward.x, 0, camera.forward.z);
+        transform.rotation =  Quaternion.LookRotation(rotation);
     } 
 }

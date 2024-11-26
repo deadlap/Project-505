@@ -11,9 +11,7 @@ public class Valve : MonoBehaviour
     [SerializeField] Gauge Gauge;
 
     public void ChangeValue(float input){
-        // if (input < 1) 
-        //     input = input % 1;
-        
+
         float output = 0;
         if (input < CorrectValue) {
             output = MaxOutput * (input/CorrectValue);
