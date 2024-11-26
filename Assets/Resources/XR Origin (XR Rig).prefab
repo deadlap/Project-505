@@ -1163,6 +1163,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeftHand: {fileID: 1888969130954249743}
   RightHand: {fileID: 8769444880028197848}
+  NormalMove: {fileID: 0}
+  ForwardTransform: {fileID: 7053313661841493976}
+  SwingThreshold: 0.032
+  MovementSpeed: 2
+  Smoothness: 0.05
+  MovementType: 0
+  MaxSwingSpeed: 0
   LeftJoystickInput:
     m_UseReference: 1
     m_Action:
@@ -1176,10 +1183,30 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
-  ForwardTransform: {fileID: 7053313661841493976}
-  SwingThreshold: 0.032
-  MovementSpeed: 2
-  Smoothness: 0.05
+  LeftControllerTrigger:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Left Controller Trigger
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: edb44629-1793-455c-8360-ec4677d0ea64
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  RightControllerTrigger:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Controller Trigger
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: ed749754-2945-4e48-aaab-72ca157640c9
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!1 &8090658702467869217
 GameObject:
   m_ObjectHideFlags: 0

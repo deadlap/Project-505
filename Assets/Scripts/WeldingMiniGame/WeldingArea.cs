@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WeldingArea : MonoBehaviour {
     [SerializeField] List<WeldingPoint> points;
+    [SerializeField] GameObject GasBubbleVFX;
     bool Completed;
 
     void Start() {
@@ -14,12 +15,17 @@ public class WeldingArea : MonoBehaviour {
 
     void Update() {
         bool AllFixed = true;
+        bool vfxPointSet = false;
         if (!Completed){
             // Disallow the foreach loop to run before all WeldingPoints are added in Start().
             if(transform.childCount != points.Count) return;
-            foreach(WeldingPoint point in points){
-                if (!point.IsFixed){
+            foreach(WeldingPoint point in points) {
+                if (!point.IsFixed) {
                     AllFixed = false;
+                    if (!vfxPointSet){
+                        GasBubbleVFX.transform.position = point.gameObject.transform.position;
+                        vfxPointSet = true;
+                    }
                 }
             }
             if (AllFixed){
@@ -32,6 +38,7 @@ public class WeldingArea : MonoBehaviour {
         if(Completed) return;
         print("completed");
         Completed = true;
+        Destroy(GasBubbleVFX);
         //do stuff and animation things
     }
 }
