@@ -18,11 +18,16 @@ public class Gauge : MonoBehaviour {
     [SerializeField] float noise;
 
     [SerializeField] List<Valve> Valves;
+    // [SerializeField] List<XRKnob> Knobs;
+    bool MiniGameStarted; 
     [SerializeField] List<float> ValveValues;
     [SerializeField] bool Completed;
 
+    // GameEventManager
+
     void Start() {
         GaugeValue = 0;
+        MiniGameStarted = false;
         // ValveValues = new List<float>(){0,0,0};
     }
 
@@ -30,14 +35,30 @@ public class Gauge : MonoBehaviour {
     }
 
     void FixedUpdate(){
+        if (!MiniGameStarted && GameEventManager.INSTANCE.WeldingDone) {
+            MiniGameStarted = true;
+            foreach (Valve _valve in Valves) {
+                _valve.gameObject.GetComponent<XRKnob>().enabled = true;
+            }
+        }
+        if (!MiniGameStarted) {
+            return;
+        }
         float randomNoise = UnityEngine.Random.Range(-noise,noise);
         
         Pin.transform.localEulerAngles = new UnityEngine.Vector3(0f, GaugeValue*360f+randomNoise, 0f);
     }
 
     public void ChangeGaugeValue(int valve, float input){
-        if (Completed)
+        if (Completed) {
+            GameEventManager.INSTANCE.GaugeDone = true;
             return;
+        }
+        // if (!MiniGameStarted) {
+        //     foreach (Valve _valve in Valves) {
+        //         _valve.gameObject.GetComponent<XRKnob>().enabled = false;
+        //     }
+        // }
         ValveValues[valve-1] = input;
         GaugeValue = 0;
         foreach(float value in ValveValues){

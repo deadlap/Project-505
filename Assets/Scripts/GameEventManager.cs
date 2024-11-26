@@ -5,7 +5,7 @@ using UnityEngine;
 using System;
 
 public class GameEventManager : MonoBehaviour {
-    public static GameEventManager instance;
+    public static GameEventManager INSTANCE;
     public bool TutorialDone;
     public bool RadioCutOutDone;
     public bool WeldingDone;
@@ -17,41 +17,42 @@ public class GameEventManager : MonoBehaviour {
     public bool InsideDivingBellDone;
 
 
-    public static event Action<string> CompleteTaskEvent;
-    public static void OnCompleteTaskEvent(string task) => CompleteTaskEvent?.Invoke(task);
+    // public static event Action<string> CompleteTaskEvent;
+    // public static void OnCompleteTaskEvent(string task) => CompleteTaskEvent?.Invoke(task);
     
-
-    void CompleteTask(string task) {
-        switch(task.ToLower()){
-            case "tutorial":
-                TutorialDone = true;
-                break;
-            case "radiocut1":
-                RadioCutOutDone = true;
-                break;
-            case "welding":
-                WeldingDone = true;
-                break;
-            case "radioestablished1":
-                RadioRestablishedDone = true;
-                break;
-            case "gauge":
-                GaugeDone = true;
-                break;
-            case "radiocut2":
-                RadioCutOut2Done = true;
-                break;
-            case "tentaclepipe":
-                TentaclePipeDone = true;
-                break;
-            case "radioestablished2":
-                RadioRestablished2Done = true;
-                break;
-            case "backsafe":
-                InsideDivingBellDone = true;
-                break;
-        }
-
+    void Start(){
+        INSTANCE = this;
     }
+    // void CompleteTask(string task) {
+    //     switch(task.ToLower()){
+    //         case "tutorial":
+    //             TutorialDone = true;
+    //             break;
+    //         case "radiocut1":
+    //             RadioCutOutDone = true;
+    //             break;
+    //         case "welding":
+    //             WeldingDone = true;
+    //             break;
+    //         case "radioestablished1":
+    //             RadioRestablishedDone = true;
+    //             break;
+    //         case "gauge":
+    //             GaugeDone = true;
+    //             break;
+    //         case "radiocut2":
+    //             RadioCutOut2Done = true;
+    //             break;
+    //         case "tentaclepipe":
+    //             TentaclePipeDone = true;
+    //             break;
+    //         case "radioestablished2":
+    //             RadioRestablished2Done = true;
+    //             break;
+    //         case "backsafe":
+    //             InsideDivingBellDone = true;
+    //             break;
+    //     }
+    // }
 
 }
