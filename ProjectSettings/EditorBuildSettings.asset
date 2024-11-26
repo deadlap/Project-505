@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/Scenes/LUCAS SCENE.unity
+  - enabled: 0
+    path: Assets/Scenes/Lucas Scene.unity
     guid: 32704b05398014381b2f2a10fb0be1fd
+  - enabled: 1
+    path: Assets/Scenes/Immersive VE.unity
+    guid: 6bc0c51e0257ada42bf96d9005928f75
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 0f8b6d3825587514b930f86a863f3a4e,
       type: 2}
