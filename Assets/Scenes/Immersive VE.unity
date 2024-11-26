@@ -42253,7 +42253,7 @@ GameObject:
   - component: {fileID: 715784817}
   - component: {fileID: 715784816}
   m_Layer: 9
-  m_Name: XR Origin (XR Rig) (1)
+  m_Name: XR Origin (XR Rig)
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47847,7 +47847,10 @@ MonoBehaviour:
   TentaclePipeDone: 0
   RadioRestablished2Done: 0
   InsideDivingBellDone: 0
-  AllWeldAreas: []
+  AllWeldAreas:
+  - {fileID: 121115220}
+  - {fileID: 2038899297}
+  - {fileID: 1675719856}
 --- !u!4 &746652471
 Transform:
   m_ObjectHideFlags: 0
@@ -71001,6 +71004,7 @@ MonoBehaviour:
   - {fileID: 912514783}
   - {fileID: 2108434479}
   - {fileID: 1523975486}
+  MiniGameStarted: 0
   ValveValues:
   - 0
   - 0
@@ -89133,55 +89137,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1729725290}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1734246599
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1734246601}
-  - component: {fileID: 1734246600}
-  m_Layer: 0
-  m_Name: Fog
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1734246600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1734246599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IsGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: d13e7e2fc2f8d2741882f6d65d13130d, type: 2}
---- !u!4 &1734246601
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1734246599}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.701808, y: -98.172386, z: 0.7734809}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1740262021
 GameObject:
   m_ObjectHideFlags: 0
@@ -119927,4 +119882,3 @@ SceneRoots:
   - {fileID: 1801769058}
   - {fileID: 746652471}
   - {fileID: 1905568855}
-  - {fileID: 1734246601}
