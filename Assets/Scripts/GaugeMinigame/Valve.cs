@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Valve : MonoBehaviour
-{
+public class Valve : MonoBehaviour {
     [SerializeField] float CorrectValue;
-    // [SerializeField] float Threshold;
     [SerializeField] float MaxOutput;
     [SerializeField] int ID;
     [SerializeField] Gauge Gauge;

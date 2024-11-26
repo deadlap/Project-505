@@ -6,10 +6,6 @@ using Unity.Mathematics;
 using System.Numerics;
 using UnityEngine.XR.Content.Interaction;
 public class Gauge : MonoBehaviour {
-
-    // public static event Action<string> ReceiveSpecialSignEvent;
-    // public static void ReceiveSpecialSign(string sign) => ReceiveSpecialSignEvent?.Invoke(sign);
-
     [SerializeField] float GaugeValue;
     [SerializeField] float CorrectGauge;
     [SerializeField] float GaugeThreshold; //how far off it can be while being correct;
@@ -18,17 +14,12 @@ public class Gauge : MonoBehaviour {
     [SerializeField] float noise;
 
     [SerializeField] List<Valve> Valves;
-    // [SerializeField] List<XRKnob> Knobs;
     bool MiniGameStarted; 
     [SerializeField] List<float> ValveValues;
     [SerializeField] bool Completed;
-
-    // GameEventManager
-
     void Start() {
         GaugeValue = 0;
         MiniGameStarted = false;
-        // ValveValues = new List<float>(){0,0,0};
     }
 
     void Update() {
@@ -54,11 +45,6 @@ public class Gauge : MonoBehaviour {
             GameEventManager.INSTANCE.GaugeDone = true;
             return;
         }
-        // if (!MiniGameStarted) {
-        //     foreach (Valve _valve in Valves) {
-        //         _valve.gameObject.GetComponent<XRKnob>().enabled = false;
-        //     }
-        // }
         ValveValues[valve-1] = input;
         GaugeValue = 0;
         foreach(float value in ValveValues){
@@ -67,7 +53,7 @@ public class Gauge : MonoBehaviour {
         if (GaugeValue > CorrectGauge-GaugeThreshold && GaugeValue < CorrectGauge+GaugeThreshold){
             Completed = true;
             DisableValves();
-            CompletePuzzle();
+            GameEventManager.INSTANCE.GaugeDone = true;
         }
     }
 
@@ -75,19 +61,5 @@ public class Gauge : MonoBehaviour {
         foreach (Valve valve in Valves) {
             valve.gameObject.GetComponent<XRKnob>().enabled = false;
         }
-        //do foreach loop to disable wheel spinning thing;
     }
-
-    void CompletePuzzle(){
-        //Run code to activate next story progression point;
-    }
-    
-    // void OnEnable() {
-    //     ReceiveSpecialSignEvent += ReceiveSign;
-    //     EnableSpecialSignEvent += EnableSign;
-    // }
-    // void OnDisable() {
-    //     ReceiveSpecialSignEvent -= ReceiveSign;
-    //     EnableSpecialSignEvent -= EnableSign;
-    // }
 }

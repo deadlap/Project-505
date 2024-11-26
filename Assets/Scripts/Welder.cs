@@ -6,10 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Welder : Equipment {
     [SerializeField] GameObject Effects;
     [SerializeField] GameObject WeldingEffect;
-    // [SerializeField] GameObject EnabledEffect;
     public bool Activated {get; private set;}
     void Start() {
-        // Light.SetActive(false);
         XRGrabInteractable welderGrabbable = GetComponent<XRGrabInteractable>();
         welderGrabbable.activated.AddListener(EnableWelder);
         welderGrabbable.deactivated.AddListener(DisableEquipmentOnEvent);
@@ -30,7 +28,6 @@ public class Welder : Equipment {
     }
 
     public void ToggleCurrentlyWelding(bool toggle){
-        // IsWelding = toggle;
         if (Activated)
             WeldingEffect.SetActive(toggle);
     }

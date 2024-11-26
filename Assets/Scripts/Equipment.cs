@@ -8,17 +8,12 @@ public class Equipment : MonoBehaviour {
 
 
     [SerializeField] GameObject BaseLocation;
-    [SerializeField] Vector3 BaseLocationVec;
-    // [SerializeField]  BaseRotation;
     [SerializeField] bool Equipped;
     [SerializeField] float Speed;
     [SerializeField] float DistanceThreshold;
     [SerializeField] Rigidbody RB;
 
     void Start() {
-        // RB = GetComponent<Rigidbody>();)
-        BaseLocationVec = Vector3.zero;
-        // XRGrabInteractable equipmentGrabbable = ;
         GetComponent<XRGrabInteractable>().selectExited.AddListener(OnSelectExited);
     }
 
@@ -36,10 +31,5 @@ public class Equipment : MonoBehaviour {
             transform.rotation = BaseLocation.transform.rotation;
             RB.velocity = Vector3.zero;
         }
-        // if (!Equipped) {
-        //     DisableEquipment();
-        // }
-
-    	// RB.useGravity = Equipped;
     }
 }
