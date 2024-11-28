@@ -1,19 +1,17 @@
 using UnityEngine;
 
-public class UnderwaterSound : MonoBehaviour
+public class UnderwaterStuff : MonoBehaviour
 {
-    AudioSource audioSource;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] GameObject underwaterEffect;
     [SerializeField] float minVolume, maxVolume;
-    void Start()
-    {
-        GetComponent<AudioSource>();
-    }
 
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             audioSource.volume = maxVolume;
+            underwaterEffect.SetActive(true);
         }
     }
 
@@ -22,6 +20,7 @@ public class UnderwaterSound : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             audioSource.volume = minVolume;
+            underwaterEffect.SetActive(false);
         }
     }
 }
