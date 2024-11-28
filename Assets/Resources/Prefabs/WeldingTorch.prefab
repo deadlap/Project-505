@@ -668,17 +668,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c44266077087ead44a620e384b081b71,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4929
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c44266077087ead44a620e384b081b71,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -97.478
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c44266077087ead44a620e384b081b71,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.6919
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c44266077087ead44a620e384b081b71,
         type: 3}
@@ -839,7 +839,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseLocation: {fileID: 0}
-  BaseLocationVec: {x: 0, y: 0, z: 0}
   Equipped: 0
   Speed: 0.35
   DistanceThreshold: 0.125

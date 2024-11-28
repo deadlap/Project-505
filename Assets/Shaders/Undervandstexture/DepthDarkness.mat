@@ -38,10 +38,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _MaxDistance: 25
-    - _MinDistance: 10
+    - _MaxDistance: 20
+    - _MinDistance: 1
     - _NoiseScale: 15
     - _NoiseSpeed: 0.1
     m_Colors:
-    - _WaterColour: {r: 0.071288705, g: 0.16981131, b: 0.13297062, a: 1}
+    - _WaterColour: {r: 0.007843138, g: 0.16078432, b: 0.19215688, a: 1}
   m_BuildTextureStacks: []
