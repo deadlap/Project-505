@@ -17113,7 +17113,7 @@ MonoBehaviour:
   - {fileID: 912514783}
   - {fileID: 2108434479}
   - {fileID: 1523975486}
-  MiniGameStarted: 1
+  MiniGameStarted: 0
   ValveValues:
   - 0
   - 0.1
