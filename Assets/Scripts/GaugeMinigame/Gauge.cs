@@ -14,7 +14,7 @@ public class Gauge : MonoBehaviour {
     [SerializeField] float noise;
 
     [SerializeField] List<Valve> Valves;
-    public bool MiniGameStarted; 
+    bool MiniGameStarted; 
     [SerializeField] List<float> ValveValues;
     [SerializeField] bool Completed;
     void Start() {

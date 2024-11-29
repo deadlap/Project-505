@@ -1,14 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Valve : MonoBehaviour {
     [SerializeField] float CorrectValue;
+    [SerializeField] float Threshold;
+    [SerializeField] GameObject Lamp;
     [SerializeField] float MaxOutput;
     [SerializeField] int ID;
     [SerializeField] Gauge Gauge;
+    float CurrentValue;
 
     public void ChangeValue(float input){
+        CurrentValue = input;
 
         float output = 0;
         if (input < CorrectValue) {
@@ -20,6 +25,9 @@ public class Valve : MonoBehaviour {
         }
         Debug.Log("output" + output);
         Gauge.ChangeGaugeValue(ID, output);
+    }
+    void Update(){
+        Lamp.SetActive((Math.Abs(CurrentValue-CorrectValue)<Threshold));
     }
 
 }
