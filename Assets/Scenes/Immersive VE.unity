@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1591213443}
-  m_IndirectSpecularColor: {r: 0.029087335, g: 0.0298977, b: 0.029896773, a: 1}
+  m_IndirectSpecularColor: {r: 0.028990248, g: 0.030007254, b: 0.03001278, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8819,7 +8819,7 @@ MonoBehaviour:
   NormalMove: {fileID: 715784816}
   ForwardTransform: {fileID: 1903721040}
   SwingThreshold: 0.02
-  MovementSpeed: 3.3
+  MovementSpeed: 2
   Smoothness: 0.05
   MovementType: 2
   MaxSwingSpeed: 0.06
