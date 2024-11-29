@@ -618,7 +618,7 @@
             ]
         },
         {
-            "name": "XRI LeftHand Interaction",
+            "name": "idfk",
             "id": "7a5e7537-cc30-4eb1-a544-6946baa8f3eb",
             "actions": [
                 {
@@ -706,6 +706,15 @@
                     "name": "PrimaryButton",
                     "type": "Button",
                     "id": "4bfbc1b4-a2bd-48b9-8b5c-c02ac2d23169",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PrimaryButtonRight",
+                    "type": "Button",
+                    "id": "771ca22b-c7ab-4e2b-862e-d113bf3b864f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -864,6 +873,17 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "PrimaryButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a6bf133-2dd3-47ae-9842-bcd984ea11c6",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "PrimaryButtonRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
