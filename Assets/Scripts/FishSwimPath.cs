@@ -16,8 +16,8 @@ public class FishSwimPath : MonoBehaviour
     void Start()
     {
         meshRenderer = GetComponentInChildren<MeshRenderer>();
+        if(movePoints == null) return;
         transform.position = movePoints[0].position;
-        //rb = GetComponent<Rigidbody>();
         target = 0;
     }
 

@@ -4385,7 +4385,8 @@ PrefabInstance:
       propertyPath: movePoints.Array.size
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4233007096433835991, guid: 2bb0da38583c63b4b961350dfad6ea4a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
