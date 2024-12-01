@@ -18,7 +18,7 @@ RenderSettings:
   m_FogColor: {r: 0, g: 0.09411766, b: 0.1137255, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.01
-  m_LinearFogStart: 1
+  m_LinearFogStart: 2
   m_LinearFogEnd: 15
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1591213443}
-  m_IndirectSpecularColor: {r: 0.029087335, g: 0.0298977, b: 0.029896773, a: 1}
+  m_IndirectSpecularColor: {r: 0.028916214, g: 0.029919984, b: 0.029905088, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4364,7 +4364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &380664265
 Transform:
   m_ObjectHideFlags: 0
@@ -4692,6 +4692,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: striped_Fish_swimming
+      objectReference: {fileID: 0}
+    - target: {fileID: 726859008072214313, guid: 2bb0da38583c63b4b961350dfad6ea4a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4233007096433835991, guid: 2bb0da38583c63b4b961350dfad6ea4a,
         type: 3}
@@ -13827,7 +13832,7 @@ MonoBehaviour:
   terrainListeners:
   - {fileID: 1166541397}
   bounds:
-    m_Center: {x: 50, y: 200, z: 0}
+    m_Center: {x: 50, y: 122, z: 0}
     m_Extent: {x: 250, y: 300, z: 250}
   filterShader: {fileID: 4800000, guid: 0f44df78e3d64d9cb2616cac3d84cb77, type: 3}
 --- !u!1 &1171390524
@@ -13846,7 +13851,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1171390525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18261,7 +18266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CorrectValue: 0.69
   Threshold: 0.05
-  Lamp: {fileID: 1568073951}
+  Lamp: {fileID: 368825573}
   MaxOutput: 0.15
   ID: 3
   Gauge: {fileID: 1405967690}
@@ -23023,6 +23028,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 713253291849137437, guid: 0336f121948edd34eb41db7706a5ea26,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 3.04
+      objectReference: {fileID: 0}
     - target: {fileID: 949286517998413367, guid: 0336f121948edd34eb41db7706a5ea26,
         type: 3}
       propertyPath: m_Name
@@ -23030,13 +23040,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1437122976296548643, guid: 0336f121948edd34eb41db7706a5ea26,
         type: 3}
+      propertyPath: m_Range
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437122976296548643, guid: 0336f121948edd34eb41db7706a5ea26,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437122976296548643, guid: 0336f121948edd34eb41db7706a5ea26,
+        type: 3}
       propertyPath: m_Intensity
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437122976296548643, guid: 0336f121948edd34eb41db7706a5ea26,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437122976296548643, guid: 0336f121948edd34eb41db7706a5ea26,
+        type: 3}
+      propertyPath: m_UseColorTemperature
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273403829049619434, guid: 0336f121948edd34eb41db7706a5ea26,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2576897198865011048, guid: 0336f121948edd34eb41db7706a5ea26,
         type: 3}
       propertyPath: m_Intensity
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2576897198865011048, guid: 0336f121948edd34eb41db7706a5ea26,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2576897198865011048, guid: 0336f121948edd34eb41db7706a5ea26,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2576897198865011048, guid: 0336f121948edd34eb41db7706a5ea26,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3155957256961140816, guid: 0336f121948edd34eb41db7706a5ea26,
         type: 3}
@@ -23057,6 +23107,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Intensity
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281582781925015087, guid: 0336f121948edd34eb41db7706a5ea26,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647181204157611284, guid: 0336f121948edd34eb41db7706a5ea26,
+        type: 3}
+      propertyPath: m_ClimbSettingsOverride.m_ConstantValue.m_AllowFreeXMovement
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4647181204157611284, guid: 0336f121948edd34eb41db7706a5ea26,
         type: 3}
@@ -23182,6 +23242,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6938222262679102681, guid: 0336f121948edd34eb41db7706a5ea26,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.107578814
+      objectReference: {fileID: 0}
+    - target: {fileID: 6938222262679102681, guid: 0336f121948edd34eb41db7706a5ea26,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.28073338
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26299,7 +26369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CorrectValue: 0.28
   Threshold: 0.05
-  Lamp: {fileID: 368825573}
+  Lamp: {fileID: 1568073951}
   MaxOutput: 0.2
   ID: 2
   Gauge: {fileID: 1405967690}
