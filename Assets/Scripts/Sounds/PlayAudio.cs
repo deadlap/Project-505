@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class PlayAudio : MonoBehaviour
 {
+    [SerializeField, Tooltip("If this is checked, the collider on the GameObject will check for the player and call PlayVaried() when they enter it.")] bool isTrigger;
+    [SerializeField, Tooltip("If this is checked, the audio will only play the first time the player enters the collider.")] bool playOnce;
+    bool hasPlayed;
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip audioClip;
     [SerializeField, Tooltip("PlayVaried prioritises playing a random of these over the singular audioClip")] private AudioClip[] multiClips;
@@ -24,7 +27,7 @@ public class PlayAudio : MonoBehaviour
     public void Play(AudioClip ac)
     {
         if (audioClip != null)
-            audioSource.PlayOneShot(ac);
+            audioSource.PlayOneShot(audioClip);
         else
             audioSource.PlayOneShot(ac);
     }
@@ -44,5 +47,22 @@ public class PlayAudio : MonoBehaviour
         if (multiClips != null) ac = multiClips[UnityEngine.Random.Range(0, multiClips.Length)];
         else ac = audioClip;
         PlayVaried(ac);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player") && isTrigger)
+        {
+            if (playOnce)
+            {
+                if(hasPlayed) return;
+                PlayVaried();
+                hasPlayed = true;
+            }
+            else
+            {
+                PlayVaried(audioSource.clip);
+            }
+        }
     }
 }
