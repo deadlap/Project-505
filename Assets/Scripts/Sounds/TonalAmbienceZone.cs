@@ -10,6 +10,10 @@ public class TonalAmbienceZone : MonoBehaviour
 #endif
     [SerializeField] private bool repeatable = false;
 
+    [SerializeField, Tooltip("If we want the audio to faze in following a curve")] private AnimationCurve fadeCurve = AnimationCurve.Constant(0f, 1f, 1f);
+    private float elapsedLength = 0f;
+    [SerializeField, Min(0.01f)] private float fadeLength = 0.01f;
+    private float maxVol = 1f;
 
     private bool playedOnce = false;
 
@@ -18,11 +22,26 @@ public class TonalAmbienceZone : MonoBehaviour
     private void Awake()
     {
         source = GetComponent<AudioSource>();
+        fadeLength = source.clip.length;
+        maxVol = source.volume;
+    }
+
+    public void BeginPlaying()
+    {
+        if (source.isPlaying) return;
+        source.Play();
+        playedOnce = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (source.isPlaying && elapsedLength < fadeLength)
+        {
+            elapsedLength += Time.deltaTime;
+            source.volume = fadeCurve.Evaluate(Mathf.Min(1f, elapsedLength / fadeLength)) * maxVol;
+        }
+
         if (repeatable) return;
         if (playedOnce && !source.isPlaying) Destroy(gameObject);
     }
@@ -30,8 +49,6 @@ public class TonalAmbienceZone : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (!other.gameObject.CompareTag("Player")) return;
-        if (source.isPlaying) return;
-        source.Play();
-        playedOnce = true;
+        BeginPlaying();
     }
 }
