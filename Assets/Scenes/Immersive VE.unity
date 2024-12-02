@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1591213443}
-  m_IndirectSpecularColor: {r: 0.029087335, g: 0.0298977, b: 0.029896773, a: 1}
+  m_IndirectSpecularColor: {r: 0.029007059, g: 0.030018479, b: 0.030012641, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -27260,6 +27260,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 646893224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2369636720892506982
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8849018835521881155, guid: 3b6e45e73d70637429f6c45096d49d7c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8849018835521881155, guid: 3b6e45e73d70637429f6c45096d49d7c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8849018835521881155, guid: 3b6e45e73d70637429f6c45096d49d7c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8849018835521881155, guid: 3b6e45e73d70637429f6c45096d49d7c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8849018835521881155, guid: 3b6e45e73d70637429f6c45096d49d7c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8849018835521881155, guid: 3b6e45e73d70637429f6c45096d49d7c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8849018835521881155, guid: 3b6e45e73d70637429f6c45096d49d7c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8849018835521881155, guid: 3b6e45e73d70637429f6c45096d49d7c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8849018835521881155, guid: 3b6e45e73d70637429f6c45096d49d7c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8849018835521881155, guid: 3b6e45e73d70637429f6c45096d49d7c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960071209143838886, guid: 3b6e45e73d70637429f6c45096d49d7c,
+        type: 3}
+      propertyPath: m_Name
+      value: Weld Sounds
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3b6e45e73d70637429f6c45096d49d7c, type: 3}
 --- !u!33 &3098552496241333578
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -27964,6 +28032,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   audioClip: {fileID: 0}
+  multiClips: []
+  minVol: 0.7
+  maxVol: 1
+  minPitch: 0.85
+  maxPitch: 1.2
 --- !u!114 &5282275867446525864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28968,3 +29041,4 @@ SceneRoots:
   - {fileID: 1729725290}
   - {fileID: 715784815}
   - {fileID: 1825355183}
+  - {fileID: 2369636720892506982}
