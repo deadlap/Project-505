@@ -7,7 +7,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Equipment : MonoBehaviour {
     [SerializeField] GameObject BaseLocation;
-    [SerializeField] bool Equipped;
     [SerializeField] float Speed;
     [SerializeField] float DistanceThreshold;
     [SerializeField] Rigidbody RB;
@@ -48,7 +47,7 @@ public class Equipment : MonoBehaviour {
     public virtual void UngrabEquipment(SelectExitEventArgs arg){}
     public virtual void DisableEquipment(){}
     void Update() {
-        if (!Equipped && Vector3.Distance(transform.position, BaseLocation.transform.position) > DistanceThreshold) {
+        if (Vector3.Distance(transform.position, BaseLocation.transform.position) > DistanceThreshold) {
             transform.position = Vector3.Lerp(transform.position, BaseLocation.transform.position, Speed);
             transform.rotation = BaseLocation.transform.rotation;
             RB.velocity = Vector3.zero;

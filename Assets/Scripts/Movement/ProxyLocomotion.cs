@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
+using System;
 // using System;
 
 public class ProxyLocomotion : MonoBehaviour {
@@ -10,18 +11,16 @@ public class ProxyLocomotion : MonoBehaviour {
     [SerializeField] private GameObject LeftHand;
     [SerializeField] private GameObject RightHand;
 
-    private Transform HeadTransform;
     private CharacterController PlayerCharacterController;
-    
-    [SerializeField] DynamicMoveProvider NormalMove;
     [SerializeField] Transform ForwardTransform;
 
     // Settings 
     [SerializeField] float SwingThreshold; //A minimum value for how much the arms should swing to move the user
+    [SerializeField] float HorizontalSwingThreshold;
     [SerializeField] float MovementSpeed; //How fast the user should move;
     [SerializeField] float Smoothness;
-    [SerializeField] int MovementType; //1 is normal controller, 3 is holding buttons down and swinging arms, 2 is nikolajs suggestion.
-    [SerializeField] float MaxSwingSpeed; //0.09
+    [SerializeField] float MaxSwingSpeed; //0.09'
+
     
     private Vector3 MotionVector;
     //Vector3 Positions for previous hand positions
@@ -44,32 +43,31 @@ public class ProxyLocomotion : MonoBehaviour {
         float speed = 0;
 
         //We only want to see direction in the y and z axis to check if the user is swinging their arms.
-        Vector3 currentLeftHandPosition = RemoveXCoordinate(LeftHand.transform.localPosition);
-        Vector3 currentRightHandPosition = RemoveXCoordinate(RightHand.transform.localPosition);
+        // Vector3 currentLeftHandPosition = RemoveXCoordinate(LeftHand.transform.localPosition);
+        // Vector3 currentRightHandPosition = RemoveXCoordinate(RightHand.transform.localPosition);
 
-        float leftHandVelocity = (currentLeftHandPosition-PreviousLeftHandPosition).magnitude;
-        float rightHandVelocity = (currentRightHandPosition-PreviousRightHandPosition).magnitude;
+        Vector3 currentLeftHandPosition = LeftHand.transform.localPosition;
+        Vector3 currentRightHandPosition = RightHand.transform.localPosition;
 
-        if (MovementType == 1) {
-            NormalMove.enabled = true;
-        } else {
-            NormalMove.enabled = false;
-        }
+        float leftHandVelocity = (RemoveXCoordinate(currentLeftHandPosition)-RemoveXCoordinate(PreviousLeftHandPosition)).magnitude;
+        float rightHandVelocity = (RemoveXCoordinate(currentRightHandPosition)-RemoveXCoordinate(PreviousRightHandPosition)).magnitude;
+        float leftHandHorizontalVelocity = Mathf.Abs(currentLeftHandPosition.x-PreviousLeftHandPosition.x);
+        float rightHandHorizontalVelocity = Mathf.Abs(currentRightHandPosition.x-PreviousRightHandPosition.x);
 
-        if (MovementType == 2) {
-            if ((leftHandVelocity >= SwingThreshold && LeftControllerTrigger.action?.ReadValue<float>() > 0)
-                || (rightHandVelocity >= SwingThreshold && RightControllerTrigger.action?.ReadValue<float>() > 0)) {
-                float leftSpeed = getSpeed(leftHandVelocity);
-                float rightSpeed = getSpeed(rightHandVelocity);
-                if (RightControllerTrigger.action?.ReadValue<float>() > 0 && LeftControllerTrigger.action?.ReadValue<float>() > 0){
-                    speed = (leftSpeed+rightSpeed)/2;
-                } else if (LeftControllerTrigger.action?.ReadValue<float>() > 0) {
-                    speed = leftSpeed;
-                } else {
-                    speed = rightSpeed;
-                }
-                MotionVector = RemoveYCoordinate(ForwardTransform.forward).normalized * speed * Time.deltaTime;
+        Debug.Log("left: " + leftHandHorizontalVelocity);
+        Debug.Log("right: " + rightHandHorizontalVelocity);
+        if ((leftHandVelocity >= SwingThreshold && LeftControllerTrigger.action?.ReadValue<float>() > 0 && leftHandHorizontalVelocity <= HorizontalSwingThreshold)
+            || (rightHandVelocity >= SwingThreshold && RightControllerTrigger.action?.ReadValue<float>() > 0 && rightHandHorizontalVelocity <= HorizontalSwingThreshold)) {
+            float leftSpeed = getSpeed(leftHandVelocity);
+            float rightSpeed = getSpeed(rightHandVelocity);
+            if (RightControllerTrigger.action?.ReadValue<float>() > 0 && LeftControllerTrigger.action?.ReadValue<float>() > 0){
+                speed = (leftSpeed+rightSpeed)/2;
+            } else if (LeftControllerTrigger.action?.ReadValue<float>() > 0) {
+                speed = leftSpeed;
+            } else {
+                speed = rightSpeed;
             }
+            MotionVector = RemoveYCoordinate(ForwardTransform.forward).normalized * speed * Time.deltaTime;
         }
 
         MotionVector = Vector3.Lerp(MotionVector, Vector3.zero, Smoothness);
@@ -85,10 +83,6 @@ public class ProxyLocomotion : MonoBehaviour {
     }
     private Vector3 RemoveYCoordinate(Vector3 inputVector) {
         return new Vector3(inputVector.x, 0, inputVector.z);
-    }
-
-    public void ChangeLocomotionType(int type){
-        MovementType = type;
     }
     public float getSpeed(float handSpeed){
         var speed = Mathf.Clamp(handSpeed, SwingThreshold, MaxSwingSpeed)/MaxSwingSpeed*MovementSpeed;

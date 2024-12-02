@@ -12,7 +12,6 @@ public class FlashLight : Equipment {
     }
     
     public override void ActivateEquipment(InputAction.CallbackContext context){
-        Debug.Log("Action Name: " + context.action.name);
         if ((LeftHandGrabbed && context.action.name == "PrimaryButtonLeft") || (RightHandGrabbed && context.action.name == "PrimaryButtonRight")) {
             ToggleFlashlight(new InputAction.CallbackContext());
         }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1591213443}
-  m_IndirectSpecularColor: {r: 0.029087335, g: 0.0298977, b: 0.029896766, a: 1}
+  m_IndirectSpecularColor: {r: 0.029087335, g: 0.0298977, b: 0.029896773, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4074,7 +4074,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseLocation: {fileID: 1855812042}
-  Equipped: 0
   Speed: 0.35
   DistanceThreshold: 0.125
   RB: {fileID: 368642669}
@@ -8543,7 +8542,6 @@ GameObject:
   - component: {fileID: 715784819}
   - component: {fileID: 715784818}
   - component: {fileID: 715784817}
-  - component: {fileID: 715784816}
   m_Layer: 9
   m_Name: XR Origin (XR Rig)
   m_TagString: Player
@@ -8568,56 +8566,6 @@ Transform:
   - {fileID: 864191269}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &715784816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715784814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b1e8c997df241c1a67045eeac79b41b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_System: {fileID: 715784824}
-  m_MoveSpeed: 2
-  m_EnableStrafe: 1
-  m_EnableFly: 0
-  m_UseGravity: 0
-  m_GravityApplicationMode: 1
-  m_ForwardSource: {fileID: 0}
-  m_LeftHandMoveAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Left Hand Move
-      m_Type: 0
-      m_ExpectedControlType: Vector2
-      m_Id: 0178e767-d413-400a-9e44-6fb167d16552
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
-  m_RightHandMoveAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Right Hand Move
-      m_Type: 0
-      m_ExpectedControlType: Vector2
-      m_Id: 63af3c33-2af0-4b0f-ac64-8280eb19317f
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
-  m_HeadTransform: {fileID: 2044476964}
-  m_LeftControllerTransform: {fileID: 554447309}
-  m_RightControllerTransform: {fileID: 934958325}
-  m_LeftHandMovementDirection: 0
-  m_RightHandMovementDirection: 0
 --- !u!114 &715784817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8721,12 +8669,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeftHand: {fileID: 554447308}
   RightHand: {fileID: 934958324}
-  NormalMove: {fileID: 715784816}
   ForwardTransform: {fileID: 1903721040}
   SwingThreshold: 0.02
+  HorizontalSwingThreshold: 0.01
   MovementSpeed: 2
   Smoothness: 0.05
-  MovementType: 2
   MaxSwingSpeed: 0.06
   LeftJoystickInput:
     m_UseReference: 1
@@ -8779,7 +8726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6bf904e410ee8479f9093d8830d1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LocomotionProvider: {fileID: 715784816}
+  m_LocomotionProvider: {fileID: 0}
   m_MinHeight: 0
   m_MaxHeight: Infinity
 --- !u!143 &715784822
@@ -14230,14 +14177,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseLocation: {fileID: 966713989}
-  Equipped: 0
   Speed: 0.35
   DistanceThreshold: 0.125
   RB: {fileID: 1193109425}
   ActivateRightButton: {fileID: 0}
   ActivateLeftButton: {fileID: 0}
-  ActivateButton: {fileID: 0}
-  Activate2Button: {fileID: 0}
   Effects: {fileID: 266518461}
   WeldingEffect: {fileID: 1144046785}
 --- !u!54 &1193109425
@@ -26268,7 +26212,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Follow: {fileID: 1729725291}
-  Offset: {x: 0, y: 0, z: 0}
 --- !u!114 &2101526951
 MonoBehaviour:
   m_ObjectHideFlags: 0
