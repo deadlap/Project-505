@@ -703,7 +703,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "PrimaryButton",
+                    "name": "PrimaryButtonLeft",
                     "type": "Button",
                     "id": "4bfbc1b4-a2bd-48b9-8b5c-c02ac2d23169",
                     "expectedControlType": "Button",
@@ -872,7 +872,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
-                    "action": "PrimaryButton",
+                    "action": "PrimaryButtonLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

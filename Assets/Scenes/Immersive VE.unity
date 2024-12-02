@@ -1070,6 +1070,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -8413492664561455070, guid: c348712bda248c246b8c49b3db54643f,
         type: 3}
+    - target: {fileID: 4798535520013883042, guid: c4a73415f33a25a4a87d5920df0a9b4e,
+        type: 3}
+      propertyPath: ActivateLeftButton
+      value: 
+      objectReference: {fileID: -7529134721534170907, guid: c348712bda248c246b8c49b3db54643f,
+        type: 3}
+    - target: {fileID: 4798535520013883042, guid: c4a73415f33a25a4a87d5920df0a9b4e,
+        type: 3}
+      propertyPath: ActivateRightButton
+      value: 
+      objectReference: {fileID: -8413492664561455070, guid: c348712bda248c246b8c49b3db54643f,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2044,6 +2056,18 @@ PrefabInstance:
     - target: {fileID: 7360402779368324460, guid: 0fadcf2211506c648bb2e93d0813b6ee,
         type: 3}
       propertyPath: Activate2Button
+      value: 
+      objectReference: {fileID: -8413492664561455070, guid: c348712bda248c246b8c49b3db54643f,
+        type: 3}
+    - target: {fileID: 7360402779368324460, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: ActivateLeftButton
+      value: 
+      objectReference: {fileID: -7529134721534170907, guid: c348712bda248c246b8c49b3db54643f,
+        type: 3}
+    - target: {fileID: 7360402779368324460, guid: 0fadcf2211506c648bb2e93d0813b6ee,
+        type: 3}
+      propertyPath: ActivateRightButton
       value: 
       objectReference: {fileID: -8413492664561455070, guid: c348712bda248c246b8c49b3db54643f,
         type: 3}
@@ -4054,9 +4078,9 @@ MonoBehaviour:
   Speed: 0.35
   DistanceThreshold: 0.125
   RB: {fileID: 368642669}
+  ActivateRightButton: {fileID: 0}
+  ActivateLeftButton: {fileID: 0}
   Light: {fileID: 1308818255}
-  ActivateButton: {fileID: 0}
-  Activate2Button: {fileID: 0}
 --- !u!23 &368642667
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6294,7 +6318,7 @@ GameObject:
   - component: {fileID: 554447310}
   m_Layer: 0
   m_Name: Left Controller
-  m_TagString: Untagged
+  m_TagString: LeftHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11090,7 +11114,7 @@ GameObject:
   - component: {fileID: 934958326}
   m_Layer: 0
   m_Name: Right Controller
-  m_TagString: Untagged
+  m_TagString: RightHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14205,6 +14229,8 @@ MonoBehaviour:
   Speed: 0.35
   DistanceThreshold: 0.125
   RB: {fileID: 1193109425}
+  ActivateRightButton: {fileID: 0}
+  ActivateLeftButton: {fileID: 0}
   ActivateButton: {fileID: 0}
   Activate2Button: {fileID: 0}
   Effects: {fileID: 266518461}

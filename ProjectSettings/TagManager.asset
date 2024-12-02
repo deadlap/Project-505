@@ -8,6 +8,8 @@ TagManager:
   - WeldingTip
   - WeldingSpot
   - FishPoint
+  - LeftHand
+  - RightHand
   layers:
   - Default
   - TransparentFX

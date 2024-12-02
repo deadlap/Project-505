@@ -6,20 +6,46 @@ using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Equipment : MonoBehaviour {
-
     [SerializeField] GameObject BaseLocation;
     [SerializeField] bool Equipped;
     [SerializeField] float Speed;
     [SerializeField] float DistanceThreshold;
     [SerializeField] Rigidbody RB;
-
-    void Start() {
+    internal bool LeftHandGrabbed;
+    internal bool RightHandGrabbed;
+    [SerializeField] internal InputActionReference ActivateRightButton;
+    [SerializeField] internal InputActionReference ActivateLeftButton;
+    public virtual void Start() {
+        LeftHandGrabbed = false;
+        RightHandGrabbed = false;
         GetComponent<XRGrabInteractable>().selectExited.AddListener(OnSelectExited);
+        ActivateLeftButton.action.started += ActivateEquipmentEvent;
+        ActivateLeftButton.action.canceled += DeactivateEquipmentEvent;
+        ActivateRightButton.action.started += ActivateEquipmentEvent;
+        ActivateRightButton.action.canceled += DeactivateEquipmentEvent;
+        XRGrabInteractable equipmentGrabbable = GetComponent<XRGrabInteractable>();
+        equipmentGrabbable.selectEntered.AddListener(GrabEquipment);
+        equipmentGrabbable.selectExited.AddListener(UngrabEquipment);
     }
-
-    void OnSelectExited(SelectExitEventArgs arg){
-        DisableEquipment();
+    internal void OnSelectExited(SelectExitEventArgs arg){
+        UngrabEquipment(arg);
     }
+    public void ActivateEquipmentEvent(InputAction.CallbackContext context){
+        ActivateEquipment(context);
+    }
+    public void DeactivateEquipmentEvent(InputAction.CallbackContext context){
+        DeactivateEquipment(context);
+    }
+    public void GrabEquipmentEvent(SelectEnterEventArgs arg){
+        GrabEquipment(arg);
+    }
+    public void UngrabEquipmentEvent(SelectExitEventArgs arg){
+        UngrabEquipment(arg);
+    }
+    public virtual void ActivateEquipment(InputAction.CallbackContext context){}
+    public virtual void DeactivateEquipment(InputAction.CallbackContext context){}
+    public virtual void GrabEquipment(SelectEnterEventArgs arg){}
+    public virtual void UngrabEquipment(SelectExitEventArgs arg){}
     public virtual void DisableEquipment(){}
     void Update() {
         if (!Equipped && Vector3.Distance(transform.position, BaseLocation.transform.position) > DistanceThreshold) {
