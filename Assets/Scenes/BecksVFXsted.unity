@@ -7863,9 +7863,9 @@ MonoBehaviour:
   Speed: 0.35
   DistanceThreshold: 0.125
   RB: {fileID: 976768174}
+  ActivateRightButton: {fileID: 0}
+  ActivateLeftButton: {fileID: 0}
   Light: {fileID: 13268368}
-  ActivateButton: {fileID: 0}
-  Activate2Button: {fileID: 0}
 --- !u!23 &976768172
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8874,8 +8874,8 @@ MonoBehaviour:
   Speed: 0.35
   DistanceThreshold: 0.125
   RB: {fileID: 1414930981}
-  ActivateButton: {fileID: 0}
-  Activate2Button: {fileID: 0}
+  ActivateRightButton: {fileID: 0}
+  ActivateLeftButton: {fileID: 0}
   Effects: {fileID: 56818326}
   WeldingEffect: {fileID: 0}
 --- !u!65 &1414930980
