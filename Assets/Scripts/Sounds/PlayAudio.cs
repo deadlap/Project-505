@@ -8,10 +8,10 @@ public class PlayAudio : MonoBehaviour
     [SerializeField, Tooltip("PlayVaried prioritises playing a random of these over the singular audioClip")] private AudioClip[] multiClips;
 
     [Header("PlayVaried Audio Settings")]
-    [SerializeField, Range(0f, 1f)] private float minVol = 1f;
+    [SerializeField, Range(0f, 1f)] private float minVol = 0.7f;
     [SerializeField, Range(0f, 1f)] private float maxVol = 1f;
-    [SerializeField, Range(0f, 2f)] private float minPitch = 1f;
-    [SerializeField, Range(0f, 2f)] private float maxPitch = 1f;
+    [SerializeField, Range(0f, 2f)] private float minPitch = 0.85f;
+    [SerializeField, Range(0f, 2f)] private float maxPitch = 1.2f;
 
     void Awake()
     {
