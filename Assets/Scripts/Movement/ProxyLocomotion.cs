@@ -54,8 +54,6 @@ public class ProxyLocomotion : MonoBehaviour {
         float leftHandHorizontalVelocity = Mathf.Abs(currentLeftHandPosition.x-PreviousLeftHandPosition.x);
         float rightHandHorizontalVelocity = Mathf.Abs(currentRightHandPosition.x-PreviousRightHandPosition.x);
 
-        Debug.Log("left: " + leftHandHorizontalVelocity);
-        Debug.Log("right: " + rightHandHorizontalVelocity);
         if ((leftHandVelocity >= SwingThreshold && LeftControllerTrigger.action?.ReadValue<float>() > 0 && leftHandHorizontalVelocity <= HorizontalSwingThreshold)
             || (rightHandVelocity >= SwingThreshold && RightControllerTrigger.action?.ReadValue<float>() > 0 && rightHandHorizontalVelocity <= HorizontalSwingThreshold)) {
             float leftSpeed = getSpeed(leftHandVelocity);

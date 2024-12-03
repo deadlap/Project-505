@@ -43,37 +43,4 @@ public class GameEventManager : MonoBehaviour {
             WeldingDone = true;
         }
     }
-    
-    // void CompleteTask(string task) {
-    //     switch(task.ToLower()){
-    //         case "tutorial":
-    //             TutorialDone = true;
-    //             break;
-    //         case "radiocut1":
-    //             RadioCutOutDone = true;
-    //             break;
-    //         case "welding":
-    //             WeldingDone = true;
-    //             break;
-    //         case "radioestablished1":
-    //             RadioRestablishedDone = true;
-    //             break;
-    //         case "gauge":
-    //             GaugeDone = true;
-    //             break;
-    //         case "radiocut2":
-    //             RadioCutOut2Done = true;
-    //             break;
-    //         case "tentaclepipe":
-    //             TentaclePipeDone = true;
-    //             break;
-    //         case "radioestablished2":
-    //             RadioRestablished2Done = true;
-    //             break;
-    //         case "backsafe":
-    //             InsideDivingBellDone = true;
-    //             break;
-    //     }
-    // }
-
 }

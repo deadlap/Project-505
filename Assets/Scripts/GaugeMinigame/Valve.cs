@@ -23,7 +23,6 @@ public class Valve : MonoBehaviour {
         } else {
             output = MaxOutput;
         }
-        Debug.Log("output" + output);
         Gauge.ChangeGaugeValue(ID, output);
     }
     void Update(){
