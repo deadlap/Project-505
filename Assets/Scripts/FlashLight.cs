@@ -3,12 +3,16 @@ using UnityEngine.InputSystem;
 using System.Collections;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class FlashLight : Equipment {
     [SerializeField] GameObject Light;
+    [SerializeField] AudioClip SoundEffect;
+    [SerializeField] AudioSource Audio;
     public override void Start() {
         base.Start();
         Light.SetActive(false);
+        Audio = GetComponent<AudioSource>();
     }
     
     public override void ActivateEquipment(InputAction.CallbackContext context){
@@ -33,6 +37,7 @@ public class FlashLight : Equipment {
 
     public void ToggleFlashlight(InputAction.CallbackContext context) {
         Light.SetActive(!Light.activeSelf);
+        Audio.PlayOneShot(SoundEffect);
     }
     public override void DisableEquipment() {
         Light.SetActive(false);

@@ -7,8 +7,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Welder : Equipment {
     [SerializeField] GameObject Effects;
     [SerializeField] GameObject WeldingEffect;
+    [SerializeField] WeldingSounds SoundEffects;
     public bool Activated {get; private set;}
-    // bool Grabbed;
     public override void Start() {
         base.Start();
     }
@@ -17,6 +17,7 @@ public class Welder : Equipment {
         if ((LeftHandGrabbed && context.action.name == "PrimaryButtonLeft") || (RightHandGrabbed && context.action.name == "PrimaryButtonRight")) {
             Effects.SetActive(true);
             Activated = true;
+            SoundEffects.BeginSpark();
         }
     }
     public override void DeactivateEquipment(InputAction.CallbackContext context){
@@ -42,10 +43,18 @@ public class Welder : Equipment {
         Effects.SetActive(false);
         Activated = false;
         WeldingEffect.SetActive(false);
+        SoundEffects.EndSpark();
     }
     public void ToggleCurrentlyWelding(bool toggle){
-        if (Activated)
+        if (Activated) {
             WeldingEffect.SetActive(toggle);
+            if (toggle) {
+                SoundEffects.WeldCorrect();
+            } else {
+                SoundEffects.EndWeld();
+            }
+        }
+            
     }
     public void DisableEquipmentOnEvent(SelectExitEventArgs arg){
         DisableEquipment();
