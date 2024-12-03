@@ -46,16 +46,14 @@ public class ProxyLocomotion : MonoBehaviour {
         // Vector3 currentLeftHandPosition = RemoveXCoordinate(LeftHand.transform.localPosition);
         // Vector3 currentRightHandPosition = RemoveXCoordinate(RightHand.transform.localPosition);
 
-        Vector3 currentLeftHandPosition = LeftHand.transform.localPosition;
-        Vector3 currentRightHandPosition = RightHand.transform.localPosition;
+        Vector3 currentLeftHandPosition = RemoveXCoordinate(LeftHand.transform.localPosition);
+        Vector3 currentRightHandPosition = RemoveXCoordinate(RightHand.transform.localPosition);
 
-        float leftHandVelocity = (RemoveXCoordinate(currentLeftHandPosition)-RemoveXCoordinate(PreviousLeftHandPosition)).magnitude;
-        float rightHandVelocity = (RemoveXCoordinate(currentRightHandPosition)-RemoveXCoordinate(PreviousRightHandPosition)).magnitude;
-        float leftHandHorizontalVelocity = Mathf.Abs(currentLeftHandPosition.x-PreviousLeftHandPosition.x);
-        float rightHandHorizontalVelocity = Mathf.Abs(currentRightHandPosition.x-PreviousRightHandPosition.x);
+        float leftHandVelocity = (currentLeftHandPosition-PreviousLeftHandPosition).magnitude;
+        float rightHandVelocity = (currentRightHandPosition-PreviousRightHandPosition).magnitude;
 
-        if ((leftHandVelocity >= SwingThreshold && LeftControllerTrigger.action?.ReadValue<float>() > 0 && leftHandHorizontalVelocity <= HorizontalSwingThreshold)
-            || (rightHandVelocity >= SwingThreshold && RightControllerTrigger.action?.ReadValue<float>() > 0 && rightHandHorizontalVelocity <= HorizontalSwingThreshold)) {
+        if ((leftHandVelocity >= SwingThreshold && LeftControllerTrigger.action?.ReadValue<float>() > 0)
+                || (rightHandVelocity >= SwingThreshold && RightControllerTrigger.action?.ReadValue<float>() > 0)) {
             float leftSpeed = getSpeed(leftHandVelocity);
             float rightSpeed = getSpeed(rightHandVelocity);
             if (RightControllerTrigger.action?.ReadValue<float>() > 0 && LeftControllerTrigger.action?.ReadValue<float>() > 0){
