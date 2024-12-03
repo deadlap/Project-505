@@ -1313,7 +1313,7 @@ AnimationClip:
   - time: 5
     functionName: Play
     data: 
-    objectReferenceParameter: {fileID: 8300000, guid: fe7bfa8a59273234c978ca7707c0df0d,
+    objectReferenceParameter: {fileID: 8300000, guid: 2e69dbc466985364b9062ceafe591671,
       type: 3}
     floatParameter: 0
     intParameter: 0
@@ -1321,7 +1321,7 @@ AnimationClip:
   - time: 47
     functionName: Play
     data: 
-    objectReferenceParameter: {fileID: 8300000, guid: ce08bc01da3f1f04ab022f845c33acf8,
+    objectReferenceParameter: {fileID: 8300000, guid: aaeaa3430df0c2b47add5d07a03968d0,
       type: 3}
     floatParameter: 0
     intParameter: 0

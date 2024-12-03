@@ -876,7 +876,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 815d97c511b909b4fa54916b960da8b0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 21779f679346bb24293af91c560e1bb4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5259,7 +5259,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9d1df833c3ece1841863fba011091995, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c2f1a0aaa9a9bcb45ac08ff71514cbee, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -23231,36 +23231,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Divingbell animated 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1693020225540872724, guid: 0336f121948edd34eb41db7706a5ea26,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 6.2958746
-      objectReference: {fileID: 0}
-    - target: {fileID: 1693020225540872724, guid: 0336f121948edd34eb41db7706a5ea26,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 5.660372
-      objectReference: {fileID: 0}
-    - target: {fileID: 1693020225540872724, guid: 0336f121948edd34eb41db7706a5ea26,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 6.387562
-      objectReference: {fileID: 0}
-    - target: {fileID: 1693020225540872724, guid: 0336f121948edd34eb41db7706a5ea26,
-        type: 3}
-      propertyPath: m_Center.x
-      value: -0.1876111
-      objectReference: {fileID: 0}
-    - target: {fileID: 1693020225540872724, guid: 0336f121948edd34eb41db7706a5ea26,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 5.588174
-      objectReference: {fileID: 0}
-    - target: {fileID: 1693020225540872724, guid: 0336f121948edd34eb41db7706a5ea26,
-        type: 3}
-      propertyPath: m_Center.z
-      value: 0.03465557
       objectReference: {fileID: 0}
     - target: {fileID: 4647181204157611284, guid: 0336f121948edd34eb41db7706a5ea26,
         type: 3}
