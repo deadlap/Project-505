@@ -8,7 +8,9 @@ public class PlayAnimation : MonoBehaviour
     [SerializeField] Animator animator;
     void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
-            animator.SetBool("ScareTrigger", true);
+        if (other.CompareTag("Player")) { 
+            Debug.Log("Jeff");
+            animator.SetBool("ActivateAnimation", true);
+    }
     }
 }
