@@ -44,7 +44,7 @@ public class PlayAudio : MonoBehaviour
     public void PlayVaried()
     {
         AudioClip ac;
-        if (multiClips != null) ac = multiClips[UnityEngine.Random.Range(0, multiClips.Length)];
+        if (multiClips != null) if (multiClips.Length > 0) ac = multiClips[UnityEngine.Random.Range(0, multiClips.Length)]; else ac = audioClip;
         else ac = audioClip;
         PlayVaried(ac);
     }
