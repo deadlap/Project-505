@@ -17,7 +17,7 @@ public class Welder : Equipment {
         if ((LeftHandGrabbed && context.action.name == "PrimaryButtonLeft") || (RightHandGrabbed && context.action.name == "PrimaryButtonRight")) {
             Effects.SetActive(true);
             Activated = true;
-            SoundEffects.BeginSpark();
+            SoundEffects.TurnOnGun();
         }
     }
     public override void DeactivateEquipment(InputAction.CallbackContext context){
@@ -43,7 +43,7 @@ public class Welder : Equipment {
         Effects.SetActive(false);
         Activated = false;
         WeldingEffect.SetActive(false);
-        SoundEffects.EndSpark();
+        SoundEffects.TurnOffGun();
     }
     public void ToggleCurrentlyWelding(bool toggle){
         if (Activated) {
