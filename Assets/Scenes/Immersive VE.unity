@@ -22896,12 +22896,17 @@ PrefabInstance:
     - target: {fileID: 3210900415477608744, guid: a2f02fab997e9ae499394042eee38dc4,
         type: 3}
       propertyPath: headBodyPositionOffset.y
-      value: -0.56
+      value: -0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210900415477608744, guid: a2f02fab997e9ae499394042eee38dc4,
+        type: 3}
+      propertyPath: head.trackingPositionOffset.y
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 3210900415477608744, guid: a2f02fab997e9ae499394042eee38dc4,
         type: 3}
       propertyPath: head.trackingPositionOffset.z
-      value: 0
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3237089839313085621, guid: a2f02fab997e9ae499394042eee38dc4,
         type: 3}
