@@ -139,7 +139,7 @@ AnimatorController:
   m_Name: GaugeCabinet
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: ScareTrigger
+  - m_Name: ActivateAnimation
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -167,7 +167,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: ScareTrigger
+    m_ConditionEvent: ActivateAnimation
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4464760278754178112}

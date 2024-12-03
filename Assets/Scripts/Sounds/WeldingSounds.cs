@@ -11,15 +11,15 @@ public class WeldingSounds : MonoBehaviour
     /// <summary>
     /// Call when turning on welding gun
     /// </summary>
-    public void BeginSpark()
+    public void TurnOnGun()
     {
-        sparkSource.Play();
+        buzzSource.Play();
     }
 
     /// <summary>
     /// Call when welding gun turns off
     /// </summary>
-    public void EndSpark()
+    public void TurnOffGun()
     {
         sparkSource.Stop();
         buzzSource.Stop();
@@ -39,6 +39,6 @@ public class WeldingSounds : MonoBehaviour
     /// </summary>
     public void EndWeld()
     {
-        buzzSource.Stop();
+        sparkSource.Stop();
     }
 }

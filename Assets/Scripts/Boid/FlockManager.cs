@@ -8,7 +8,7 @@ public class FlockManager : MonoBehaviour
     [SerializeField, Min(1)] private int amount = 20;
     [HideInInspector] public GameObject[] fishies;
     [Space(5f), Header("Swim instructions")]
-    [SerializeField, Tooltip("Whether the flock swims towards goalTransform")] private bool customGoal = true;
+    [SerializeField, Tooltip("Whether the flock swims towards goalTransform")] public bool customGoal = true;
     [SerializeField, Tooltip("What the flock swims towards when customGoal is true")] private Transform goalTransform;
     [HideInInspector] public Vector3 goalPosition = Vector3.zero;
     [Space(5f), Header("Swim area")]

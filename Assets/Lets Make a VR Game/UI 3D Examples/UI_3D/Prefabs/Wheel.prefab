@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomSmallScreeches: 0
-  maxVol: 0.4
+  maxVol: 0.3
   loopNotes: 'Looping clip plays a screeching sound constantly.
 
     This clip changes
@@ -172,7 +172,7 @@ MonoBehaviour:
     maxVol as the volume'
   loopingClip: {fileID: 8300000, guid: d0ab5d9ede792334f83bda25657e984e, type: 3}
   minRotationSpeed: 0.01
-  maxRotationSpeed: 0.1
+  maxRotationSpeed: 0.2
   falloffSeconds: 0.2
   creekNotes: 'Small screeches plays a screeching sounds every once in a while.
 

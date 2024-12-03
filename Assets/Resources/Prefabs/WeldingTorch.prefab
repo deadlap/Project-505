@@ -958,6 +958,7 @@ MonoBehaviour:
   ActivateLeftButton: {fileID: 0}
   Effects: {fileID: 3506971096056894406}
   WeldingEffect: {fileID: 5009913574008252840}
+  SoundEffects: {fileID: 0}
 --- !u!114 &1228733239105663019
 MonoBehaviour:
   m_ObjectHideFlags: 0
