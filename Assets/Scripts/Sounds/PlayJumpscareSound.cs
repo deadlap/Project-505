@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayJumpscareSound : MonoBehaviour {
     [SerializeField] AudioSource AudioPlayer;
     [SerializeField] AudioClip Clip;
-    bool PlaySound;
+    [SerializeField] bool PlaySound;
     void Start(){
         AudioPlayer = GetComponent<AudioSource>();
         PlaySound = false;
