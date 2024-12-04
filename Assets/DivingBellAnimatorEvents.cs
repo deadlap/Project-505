@@ -32,4 +32,9 @@ public class DivingBellAnimatorEvents : MonoBehaviour
     {
         animator.SetBool("MessyDivingBell", true);        
     }
+
+    public void QuitApplication()
+    {
+        Application.Quit();
+    }
 }
