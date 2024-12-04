@@ -42,7 +42,6 @@ public class Gauge : MonoBehaviour {
 
     public void ChangeGaugeValue(int valve, float input){
         if (Completed) {
-            GameEventManager.INSTANCE.GaugeDone = true;
             return;
         }
         ValveValues[valve-1] = input;

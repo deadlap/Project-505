@@ -66,7 +66,7 @@ public class ProxyLocomotion : MonoBehaviour {
             MotionVector = RemoveYCoordinate(ForwardTransform.forward).normalized * speed * Time.deltaTime;
         }
 
-        MotionVector = Vector3.Lerp(MotionVector, Vector3.zero, Smoothness);
+        MotionVector = Vector3.Lerp(MotionVector, Vector3.zero, Time.deltaTime*Smoothness);
         PlayerCharacterController.Move(MotionVector);
 
         // set previous position of hands to what they currently are, for the next update
