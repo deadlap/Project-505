@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayEngineSound : MonoBehaviour {
+public class PlayGaugeDone : MonoBehaviour {
     void OnEnable() {
-        GameEventManager.CompleteGaugeEvent += EngineSound;
+        GameEventManager.CompleteGaugeEvent += Voiceover;
     }
 
     void OnDisable() {
-        GameEventManager.CompleteGaugeEvent -= EngineSound;
+        GameEventManager.CompleteGaugeEvent -= Voiceover;
     }
     [SerializeField] PlayAudio AudioPlayer;
     void Start(){
         AudioPlayer = GetComponent<PlayAudio>();
     }
-    void EngineSound() {
+    void Voiceover() {
+        Invoke("PlayVoiceover",5.5f);
+    }
+    void PlayVoiceover(){
         AudioPlayer.Play();
     }
 }
