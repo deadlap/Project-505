@@ -5039,6 +5039,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8898143554076671142, guid: 5710d6872d858fb47b64cc553d380350,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1236981063}
+    - targetCorrespondingSourceObject: {fileID: 8898143554076671142, guid: 5710d6872d858fb47b64cc553d380350,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1236981062}
     - targetCorrespondingSourceObject: {fileID: 8898143554076671142, guid: 5710d6872d858fb47b64cc553d380350,
         type: 3}
@@ -15914,6 +15918,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 18.62416, y: 4.755245, z: 3.8996782}
   m_Center: {x: -0.067977905, y: -2.3959532, z: -2.19944}
+--- !u!65 &1236981063
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349653335}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 24.219637, y: 5.9844337, z: 1.6502681}
+  m_Center: {x: 1.3259697, y: -3.3824804, z: 0.06967723}
 --- !u!1 &1238657660
 GameObject:
   m_ObjectHideFlags: 0
@@ -28645,6 +28670,11 @@ PrefabInstance:
         type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881225265605248890, guid: 5b907be80ce143e43b5da969ed10e186,
+        type: 3}
+      propertyPath: m_Name
+      value: Pin
       objectReference: {fileID: 0}
     - target: {fileID: 5724911775516255209, guid: 5b907be80ce143e43b5da969ed10e186,
         type: 3}
