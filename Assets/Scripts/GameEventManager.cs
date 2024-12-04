@@ -15,6 +15,9 @@ public class GameEventManager : MonoBehaviour {
     // public static event Action<string> CompleteTaskEvent;
     // public static void OnCompleteTaskEvent(string task) => CompleteTaskEvent?.Invoke(task);
 
+    public static event Action CompleteWeldingEvent;
+    public static void OnCompleteWeldingEvent() => CompleteWeldingEvent?.Invoke();
+
     void Start()
     {
         INSTANCE = this;
@@ -33,6 +36,7 @@ public class GameEventManager : MonoBehaviour {
         }
         if (AllFixed && !WeldingDone){
             //indsæt kode der skal køres når welding er færdig 
+            CompleteWeldingEvent.Invoke();
             AllWeldsCompleted = true;
             WeldingDone = true;
         }
