@@ -494,7 +494,7 @@ AnimationClip:
       value: {fileID: 7770318624900243041, guid: 44f3430c585c6514985b591c28e05a78,
         type: 3}
     - time: 60.166668
-      value: {fileID: 2100000, guid: 71df6ea970e69d741a57a644db6deead, type: 2}
+      value: {fileID: 2100000, guid: 904098349cb831e4cb9876703961154d, type: 2}
     attribute: m_Materials.Array.data[0]
     path: Poster_2 /Poster
     classID: 23
@@ -506,7 +506,7 @@ AnimationClip:
       value: {fileID: 7770318624900243041, guid: 44f3430c585c6514985b591c28e05a78,
         type: 3}
     - time: 52.166668
-      value: {fileID: 2100000, guid: b51b77add6962a3428019a8ea0c5c19b, type: 2}
+      value: {fileID: 2100000, guid: 6259ecb6c5baa5846a410183caf7ff8e, type: 2}
     attribute: m_Materials.Array.data[0]
     path: Poster_1/Poster
     classID: 23
@@ -604,9 +604,9 @@ AnimationClip:
     - {fileID: 7770318624900243041, guid: 44f3430c585c6514985b591c28e05a78, type: 3}
     - {fileID: 2100000, guid: 904098349cb831e4cb9876703961154d, type: 2}
     - {fileID: 7770318624900243041, guid: 44f3430c585c6514985b591c28e05a78, type: 3}
-    - {fileID: 2100000, guid: 71df6ea970e69d741a57a644db6deead, type: 2}
+    - {fileID: 2100000, guid: 904098349cb831e4cb9876703961154d, type: 2}
     - {fileID: 7770318624900243041, guid: 44f3430c585c6514985b591c28e05a78, type: 3}
-    - {fileID: 2100000, guid: b51b77add6962a3428019a8ea0c5c19b, type: 2}
+    - {fileID: 2100000, guid: 6259ecb6c5baa5846a410183caf7ff8e, type: 2}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
