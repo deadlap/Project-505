@@ -23803,6 +23803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f6a785ca69caa4c8196329b27ff14c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tentacles: {fileID: 1973415664}
 --- !u!1 &1828764278
 GameObject:
   m_ObjectHideFlags: 0

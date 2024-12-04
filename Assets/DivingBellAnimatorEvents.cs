@@ -3,10 +3,12 @@ using UnityEngine;
 public class DivingBellAnimatorEvents : MonoBehaviour
 {
     Animator animator;
+    [SerializeField] GameObject tentacles;
     
     void Awake()
     {
         animator = GetComponent<Animator>();
+        tentacles.SetActive(false);
     }
 
     void OnEnable()
