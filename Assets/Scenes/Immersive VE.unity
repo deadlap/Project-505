@@ -1356,6 +1356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 154029474}
   - component: {fileID: 154029479}
+  - component: {fileID: 154029480}
   - component: {fileID: 154029478}
   - component: {fileID: 154029477}
   - component: {fileID: 154029476}
@@ -1545,8 +1546,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163bdb5f197a53f468a0239d1858ec3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioPlayer: {fileID: 154029476}
+  AudioPlayer: {fileID: 154029480}
   AC: {fileID: 8300000, guid: ef8854914b157f344aeffe55f735405c, type: 3}
+--- !u!114 &154029480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154029473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33542991fff973647ba32459cccf2531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTrigger: 0
+  playOnce: 0
+  audioSource: {fileID: 154029475}
+  audioClip: {fileID: 0}
+  multiClips: []
+  minVol: 0.7
+  maxVol: 1
+  minPitch: 0.85
+  maxPitch: 1.2
 --- !u!1001 &161649423
 PrefabInstance:
   m_ObjectHideFlags: 0
