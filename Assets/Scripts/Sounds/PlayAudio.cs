@@ -26,11 +26,15 @@ public class PlayAudio : MonoBehaviour
 
     public void Play(AudioClip ac)
     {
+        
         if (audioClip != null)
             audioSource.PlayOneShot(audioClip);
         else
+        {
             audioSource.PlayOneShot(ac);
+        }
     }
+    
     public void Play() {
         if (audioClip != null)
             audioSource.PlayOneShot(audioClip);
