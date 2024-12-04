@@ -20,10 +20,7 @@ public class UnderwaterStuff : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             audioSource.volume = minVolume;
-            underwaterEffect.SetActive(false);
-            if (GameEventManager.INSTANCE.BrokenReached) {
-                GameEventManager.INSTANCE.StartEndSequence();
-            }
+            underwaterEffect.SetActive(false);  
         }
     }
 }
