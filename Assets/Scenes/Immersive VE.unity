@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1591213443}
-  m_IndirectSpecularColor: {r: 0.028990248, g: 0.030007254, b: 0.03001278, a: 1}
+  m_IndirectSpecularColor: {r: 0.029087335, g: 0.0298977, b: 0.029896766, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8426,6 +8426,9 @@ Transform:
   - {fileID: 1075653614}
   - {fileID: 454441896}
   - {fileID: 154029474}
+  - {fileID: 1562904831}
+  - {fileID: 1681756595}
+  - {fileID: 1245471306}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &618946377
@@ -16652,11 +16655,11 @@ Transform:
   m_GameObject: {fileID: 1245471305}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 129.59, y: -92.619, z: 35.34}
+  m_LocalPosition: {x: 76.59, y: 1.9600067, z: -4.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 618946376}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1245471307
 MonoBehaviour:
@@ -16690,8 +16693,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.9979725, y: 3.065628, z: 25.90181}
-  m_Center: {x: -9.401933, y: 1.032814, z: -8.143578}
+  m_Size: {x: 0.9979725, y: 4.4072113, z: 25.90181}
+  m_Center: {x: -9.401933, y: 0.3620224, z: -8.143578}
 --- !u!23 &1245471309
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20796,11 +20799,11 @@ Transform:
   m_GameObject: {fileID: 1562904830}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.6100006, y: -86.79, z: 5.3199997}
+  m_LocalPosition: {x: -45.39, y: 6.6600037, z: -34.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 618946376}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1562904832
 MonoBehaviour:
@@ -22260,11 +22263,11 @@ Transform:
   m_GameObject: {fileID: 1681756594}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 37.952, y: -92.619, z: 35.34}
+  m_LocalPosition: {x: -15.048, y: 1.9600067, z: -4.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 618946376}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1681756596
 MonoBehaviour:
@@ -22298,8 +22301,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.9979725, y: 3.065628, z: 25.90181}
-  m_Center: {x: -9.401933, y: 1.032814, z: -8.143578}
+  m_Size: {x: 0.9979725, y: 4.279114, z: 25.90181}
+  m_Center: {x: -9.401933, y: 0.42607117, z: -8.143578}
 --- !u!23 &1681756598
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31437,6 +31440,3 @@ SceneRoots:
   - {fileID: 1997781522}
   - {fileID: 6760818}
   - {fileID: 180657513}
-  - {fileID: 1562904831}
-  - {fileID: 1681756595}
-  - {fileID: 1245471306}
