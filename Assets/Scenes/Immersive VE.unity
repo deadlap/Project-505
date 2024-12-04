@@ -6320,7 +6320,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20000, y: 20000}
+  m_SizeDelta: {x: 99999, y: 99999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &391753446
 MonoBehaviour:
@@ -11014,9 +11014,9 @@ Canvas:
   m_GameObject: {fileID: 752850159}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 2044476969}
+  m_PlaneDistance: 0.04
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -15152,7 +15152,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ef8854914b157f344aeffe55f735405c, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -29506,6 +29506,11 @@ PrefabInstance:
       propertyPath: minPitch
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1925716114697243462, guid: 5b907be80ce143e43b5da969ed10e186,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 5282275867446525863}
     - target: {fileID: 3727495260328706877, guid: 5b907be80ce143e43b5da969ed10e186,
         type: 3}
       propertyPath: animator
@@ -29659,6 +29664,12 @@ Animator:
 --- !u!4 &5282275867446525862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6606898851719608246, guid: 5b907be80ce143e43b5da969ed10e186,
+    type: 3}
+  m_PrefabInstance: {fileID: 5282275867446525859}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &5282275867446525863 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 241702479982189665, guid: 5b907be80ce143e43b5da969ed10e186,
     type: 3}
   m_PrefabInstance: {fileID: 5282275867446525859}
   m_PrefabAsset: {fileID: 0}
