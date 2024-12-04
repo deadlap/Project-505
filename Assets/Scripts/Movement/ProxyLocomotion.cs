@@ -38,6 +38,19 @@ public class ProxyLocomotion : MonoBehaviour {
         PlayerCharacterController = GetComponent<CharacterController>();
         MotionVector = Vector3.zero;
     }
+        void OnEnable()
+    {
+        GameEventManager.BrokenEvent += IncreaseMoveSpeed;
+    }
+
+    void OnDisable()
+    {
+        GameEventManager.BrokenEvent -= IncreaseMoveSpeed;
+    }
+
+    void IncreaseMoveSpeed(){
+        MovementSpeed = 3.2f;
+    }
 
     void Update() {
         float speed = 0;
