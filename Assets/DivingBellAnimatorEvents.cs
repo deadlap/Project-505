@@ -12,13 +12,13 @@ public class DivingBellAnimatorEvents : MonoBehaviour
     void OnEnable()
     {
         GameEventManager.EndEvent += CloseHatch;
-        GameEventManager.BrokenEvent += MessyDivingBell;
+        GameEventManager.CompleteGaugeEvent += MessyDivingBell;
     }
 
     void OnDisable()
     {
         GameEventManager.EndEvent -= CloseHatch;
-        GameEventManager.BrokenEvent -= MessyDivingBell;
+        GameEventManager.CompleteGaugeEvent -= MessyDivingBell;
     }
 
     void CloseHatch()
