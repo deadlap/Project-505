@@ -17,6 +17,7 @@ public class Gauge : MonoBehaviour {
     bool MiniGameStarted; 
     [SerializeField] List<float> ValveValues;
     [SerializeField] bool Completed;
+    [SerializeField] Animator ClosetAnimator;
     void Start() {
         GaugeValue = 0;
         MiniGameStarted = false;
@@ -53,6 +54,7 @@ public class Gauge : MonoBehaviour {
             Completed = true;
             DisableValves();
             GameEventManager.INSTANCE.CompleteGauge();
+            ClosetAnimator.SetBool("CabinetBreaksBool",true);
         }
     }
 

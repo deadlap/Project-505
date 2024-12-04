@@ -1355,11 +1355,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 154029474}
-  - component: {fileID: 154029479}
   - component: {fileID: 154029480}
   - component: {fileID: 154029478}
   - component: {fileID: 154029477}
-  - component: {fileID: 154029476}
   - component: {fileID: 154029475}
   m_Layer: 0
   m_Name: Gauge/Valve Voice Line Trigger
@@ -1479,27 +1477,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &154029476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 154029473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33542991fff973647ba32459cccf2531, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTrigger: 1
-  playOnce: 1
-  audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
-  multiClips: []
-  minVol: 1
-  maxVol: 1
-  minPitch: 1
-  maxPitch: 1
 --- !u!65 &154029477
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1534,20 +1511,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Collider: {fileID: 154029477}
---- !u!114 &154029479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 154029473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 163bdb5f197a53f468a0239d1858ec3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AudioPlayer: {fileID: 154029480}
-  AC: {fileID: 8300000, guid: ef8854914b157f344aeffe55f735405c, type: 3}
 --- !u!114 &154029480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8619,6 +8582,7 @@ Transform:
   - {fileID: 200785690}
   - {fileID: 1075653614}
   - {fileID: 454441896}
+  - {fileID: 1165826723}
   - {fileID: 154029474}
   - {fileID: 17048172}
   - {fileID: 1355272804}
@@ -15069,6 +15033,171 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1154393734}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1165826722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1165826723}
+  - component: {fileID: 1165826726}
+  - component: {fileID: 1165826725}
+  - component: {fileID: 1165826724}
+  m_Layer: 0
+  m_Name: Welding Done Voice Line
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1165826723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165826722}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.520004, y: 0, z: -5.5600014}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 618946376}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1165826724
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165826722}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1165826725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165826722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33542991fff973647ba32459cccf2531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTrigger: 0
+  playOnce: 0
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 0}
+  multiClips: []
+  minVol: 1
+  maxVol: 1
+  minPitch: 1
+  maxPitch: 1
+--- !u!114 &1165826726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165826722}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163bdb5f197a53f468a0239d1858ec3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioPlayer: {fileID: 1165826725}
+  AC: {fileID: 8300000, guid: c2f1a0aaa9a9bcb45ac08ff71514cbee, type: 3}
 --- !u!1 &1166541393
 GameObject:
   m_ObjectHideFlags: 0
