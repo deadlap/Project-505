@@ -25,7 +25,7 @@ public class LowHumTone : MonoBehaviour
     
     void PlayHum()
     {
-        audioSource.Play();
+        audioSource.PlayOneShot(audioSource.clip);
         isHumming = true;
     }
     
