@@ -53,7 +53,7 @@ public class Gauge : MonoBehaviour {
         if (GaugeValue > CorrectGauge-GaugeThreshold && GaugeValue < CorrectGauge+GaugeThreshold){
             Completed = true;
             DisableValves();
-            GameEventManager.INSTANCE.GaugeDone = true;
+            GameEventManager.INSTANCE.CompleteGauge();
         }
     }
 

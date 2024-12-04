@@ -14,6 +14,8 @@ public class GameEventManager : MonoBehaviour {
     bool AllWeldsCompleted;
     public static event Action CompleteWeldingEvent;
     public static void OnCompleteWeldingEvent() => CompleteWeldingEvent?.Invoke();
+    public static event Action CompleteGaugeEvent;
+    public static void OnCompleteGaugeEvent() => CompleteGaugeEvent?.Invoke();
     public static event Action BrokenEvent;
     public static void OnBrokenEvent() => BrokenEvent?.Invoke();
     public static event Action EndEvent;
@@ -38,6 +40,12 @@ public class GameEventManager : MonoBehaviour {
             CompleteWeldingEvent.Invoke();
             AllWeldsCompleted = true;
             WeldingDone = true;
+        }
+    }
+    public void CompleteGauge(){
+        if (!GaugeDone) {
+            GaugeDone = true;
+            CompleteGaugeEvent?.Invoke();
         }
     }
     public void StartBrokenSequence(){
