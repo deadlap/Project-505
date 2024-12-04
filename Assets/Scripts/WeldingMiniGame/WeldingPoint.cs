@@ -12,10 +12,13 @@ public class WeldingPoint : MonoBehaviour {
     [SerializeField] float weldHeight = 0.01f;
     [SerializeField] float minScale, maxScale;
     [SerializeField] bool testWeld;
+    float CurrentWeldTimer;
+    float MaxWeldTime;
 
     public bool IsFixed;
     void Start() {
         IsFixed = false;
+        MaxWeldTime = 1.25f;
     }
 
     // For testing purposes.
@@ -33,13 +36,25 @@ public class WeldingPoint : MonoBehaviour {
         newWeld.transform.localScale = new Vector3(Random.Range(minScale, maxScale), weldHeight, Random.Range(minScale, maxScale));
         IsFixed = true;            
     }
-    // void Fix(){
-    //     //Run Funny animations;
-    // }
-
+    void OnTriggerStay(Collider other) {
+        if (other.CompareTag("WeldingTip") && (other.gameObject.GetComponent<WeldingContact>().WelderGun.Activated)){
+            if (IsFixed)
+                return;
+            CurrentWeldTimer += Time.deltaTime;
+            if (MaxWeldTime <= CurrentWeldTimer) 
+                SpawnWeld();
+        }
+    }
     void OnTriggerEnter(Collider other) {
         if (other.CompareTag("WeldingTip") && (other.gameObject.GetComponent<WeldingContact>().WelderGun.Activated)){
-            SpawnWeld();
+            // SpawnWeld();
+            CurrentWeldTimer += Time.deltaTime;
+        }
+    }
+    void OnTriggerExit(Collider other) {
+        if (other.CompareTag("WeldingTip") && (other.gameObject.GetComponent<WeldingContact>().WelderGun.Activated)){
+            // SpawnWeld();
+            CurrentWeldTimer = 0f;
         }
     }
 }
