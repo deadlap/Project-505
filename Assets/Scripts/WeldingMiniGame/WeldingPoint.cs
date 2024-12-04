@@ -18,7 +18,7 @@ public class WeldingPoint : MonoBehaviour {
     public bool IsFixed;
     void Start() {
         IsFixed = false;
-        MaxWeldTime = 1.25f;
+        MaxWeldTime = .83f;
     }
 
     // For testing purposes.

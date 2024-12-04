@@ -10395,7 +10395,7 @@ MonoBehaviour:
   SwingThreshold: 0.02
   HorizontalSwingThreshold: 0.01
   MovementSpeed: 2.56
-  Smoothness: 0.25
+  Smoothness: 3.75
   MaxSwingSpeed: 0.06
   LeftJoystickInput:
     m_UseReference: 1
