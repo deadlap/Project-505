@@ -1565,10 +1565,10 @@ MonoBehaviour:
   audioSource: {fileID: 154029475}
   audioClip: {fileID: 0}
   multiClips: []
-  minVol: 0.7
+  minVol: 1
   maxVol: 1
-  minPitch: 0.85
-  maxPitch: 1.2
+  minPitch: 1
+  maxPitch: 1
 --- !u!1001 &161649423
 PrefabInstance:
   m_ObjectHideFlags: 0
