@@ -1,13 +1,11 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayAnimation : MonoBehaviour
-{
+public class TriggerGaugeDoorOpen : MonoBehaviour {
     [SerializeField] Animator animator;
     void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Player")) { 
+        if (other.CompareTag("Player") && GameEventManager.INSTANCE.WeldingDone) {
             animator.SetBool("ActivateAnimation", true);
         }
     }

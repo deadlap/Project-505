@@ -6,14 +6,8 @@ using System;
 
 public class GameEventManager : MonoBehaviour {
     public static GameEventManager INSTANCE;
-    public bool TutorialDone;
-    public bool RadioCutOutDone;
     public bool WeldingDone;
-    public bool RadioRestablishedDone;
     public bool GaugeDone;
-    public bool RadioCutOut2Done;
-    public bool TentaclePipeDone;
-    public bool RadioRestablished2Done;
     public bool InsideDivingBellDone;
     [SerializeField] List<WeldingArea> AllWeldAreas;
     bool AllWeldsCompleted;
