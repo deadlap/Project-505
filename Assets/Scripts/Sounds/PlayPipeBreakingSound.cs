@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayPipeBreakingSound : MonoBehaviour {
     void OnEnable() {
-        GameEventManager.EndEvent += PlayBreakSound;
+        GameEventManager.CompleteGaugeEvent += PlayBreakSound;
     }
 
     void OnDisable() {
-        GameEventManager.EndEvent -= PlayBreakSound;
+        GameEventManager.CompleteGaugeEvent -= PlayBreakSound;
     }
     [SerializeField] PlayAudio AudioPlayer;
     void Start(){
