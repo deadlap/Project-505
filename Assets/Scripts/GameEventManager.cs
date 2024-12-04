@@ -16,6 +16,8 @@ public class GameEventManager : MonoBehaviour {
     public static void OnCompleteWeldingEvent() => CompleteWeldingEvent?.Invoke();
     public static event Action BrokenEvent;
     public static void OnBrokenEvent() => BrokenEvent?.Invoke();
+    public static event Action EndEvent;
+    public static void OnEndEvent() => EndEvent?.Invoke();
     void Start() {
         INSTANCE = this;
         AllWeldsCompleted = false;
@@ -39,9 +41,14 @@ public class GameEventManager : MonoBehaviour {
         }
     }
     public void StartBrokenSequence(){
+        if (BrokenReached) {
+            BrokenEvent?.Invoke();
+        }
+    }
+    public void StartEndSequence(){
         if (BrokenReached && !InsideDivingBellDone) {
             InsideDivingBellDone = true;
-            BrokenEvent?.Invoke();
+            EndEvent?.Invoke();
         }
     }
 }
