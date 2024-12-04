@@ -1196,7 +1196,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 2.3333333
+  - time: 2.2833333
     functionName: Play
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: fc6b2a40330edc843b40eb6d89425efb,

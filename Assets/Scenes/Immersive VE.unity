@@ -29491,6 +29491,21 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1925716114697243462, guid: 5b907be80ce143e43b5da969ed10e186,
+        type: 3}
+      propertyPath: minVol
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925716114697243462, guid: 5b907be80ce143e43b5da969ed10e186,
+        type: 3}
+      propertyPath: maxPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925716114697243462, guid: 5b907be80ce143e43b5da969ed10e186,
+        type: 3}
+      propertyPath: minPitch
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3727495260328706877, guid: 5b907be80ce143e43b5da969ed10e186,
         type: 3}
       propertyPath: animator
