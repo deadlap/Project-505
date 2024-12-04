@@ -8,18 +8,15 @@ public class GameEventManager : MonoBehaviour {
     public static GameEventManager INSTANCE;
     public bool WeldingDone;
     public bool GaugeDone;
+    public bool BrokenReached;
     public bool InsideDivingBellDone;
     [SerializeField] List<WeldingArea> AllWeldAreas;
     bool AllWeldsCompleted;
-
-    // public static event Action<string> CompleteTaskEvent;
-    // public static void OnCompleteTaskEvent(string task) => CompleteTaskEvent?.Invoke(task);
-
     public static event Action CompleteWeldingEvent;
     public static void OnCompleteWeldingEvent() => CompleteWeldingEvent?.Invoke();
-
-    void Start()
-    {
+    public static event Action BrokenEvent;
+    public static void OnBrokenEvent() => BrokenEvent?.Invoke();
+    void Start() {
         INSTANCE = this;
         AllWeldsCompleted = false;
     }
@@ -39,6 +36,12 @@ public class GameEventManager : MonoBehaviour {
             CompleteWeldingEvent.Invoke();
             AllWeldsCompleted = true;
             WeldingDone = true;
+        }
+    }
+    public void StartBrokenSequence(){
+        if (BrokenReached && !InsideDivingBellDone) {
+            InsideDivingBellDone = true;
+            BrokenEvent?.Invoke();
         }
     }
 }

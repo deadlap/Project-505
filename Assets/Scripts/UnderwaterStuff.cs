@@ -21,6 +21,9 @@ public class UnderwaterStuff : MonoBehaviour
         {
             audioSource.volume = minVolume;
             underwaterEffect.SetActive(false);
+            if (GameEventManager.INSTANCE.GaugeDone) {
+                GameEventManager.INSTANCE.StartBrokenSequence();
+            }
         }
     }
 }
