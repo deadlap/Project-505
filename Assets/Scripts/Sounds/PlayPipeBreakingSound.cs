@@ -15,6 +15,9 @@ public class PlayPipeBreakingSound : MonoBehaviour {
         AudioPlayer = GetComponent<PlayAudio>();
     }
     void PlayBreakSound() {
-        Invoke("AudioPlayer.Play()", 3);
+        Invoke("CallbreakSound", 3);
+    }
+    void CallBreakSound() {
+        AudioPlayer.Play();
     }
 }
