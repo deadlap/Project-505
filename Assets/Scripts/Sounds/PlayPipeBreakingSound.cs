@@ -6,7 +6,6 @@ public class PlayPipeBreakingSound : MonoBehaviour {
     void OnEnable() {
         GameEventManager.CompleteGaugeEvent += PlayBreakSound;
     }
-
     void OnDisable() {
         GameEventManager.CompleteGaugeEvent -= PlayBreakSound;
     }
@@ -15,7 +14,7 @@ public class PlayPipeBreakingSound : MonoBehaviour {
         AudioPlayer = GetComponent<PlayAudio>();
     }
     void PlayBreakSound() {
-        Invoke("CallbreakSound", 3);
+        Invoke("CallBreakSound", 3);
     }
     void CallBreakSound() {
         AudioPlayer.Play();
