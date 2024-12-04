@@ -1191,6 +1191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 154029474}
+  - component: {fileID: 154029479}
   - component: {fileID: 154029478}
   - component: {fileID: 154029477}
   - component: {fileID: 154029476}
@@ -1368,6 +1369,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Collider: {fileID: 154029477}
+--- !u!114 &154029479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154029473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163bdb5f197a53f468a0239d1858ec3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioPlayer: {fileID: 154029476}
+  AC: {fileID: 8300000, guid: 21779f679346bb24293af91c560e1bb4, type: 3}
 --- !u!1001 &161649423
 PrefabInstance:
   m_ObjectHideFlags: 0
