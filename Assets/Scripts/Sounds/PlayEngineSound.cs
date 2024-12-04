@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayEngineSound : MonoBehaviour {
     void OnEnable() {
-        GameEventManager.EndEvent += EngineSound;
+        GameEventManager.CompleteGaugeEvent += EngineSound;
     }
 
     void OnDisable() {
-        GameEventManager.EndEvent -= EngineSound;
+        GameEventManager.CompleteGaugeEvent -= EngineSound;
     }
     [SerializeField] PlayAudio AudioPlayer;
     void Start(){
