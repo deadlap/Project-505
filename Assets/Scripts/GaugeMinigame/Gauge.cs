@@ -54,7 +54,7 @@ public class Gauge : MonoBehaviour {
             Completed = true;
             DisableValves();
             GameEventManager.INSTANCE.CompleteGauge();
-            ClosetAnimator.SetBool("CabinetBreaksBool",true);
+            // ClosetAnimator.SetBool("CabinetBreaksBool",true);
         }
     }
 

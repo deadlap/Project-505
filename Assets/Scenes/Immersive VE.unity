@@ -439,7 +439,7 @@ GameObject:
   - component: {fileID: 17048174}
   - component: {fileID: 17048173}
   m_Layer: 0
-  m_Name: BeforeTentacleJumpscare AC
+  m_Name: ConnectionLost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -470,7 +470,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 21779f679346bb24293af91c560e1bb4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 77e0c0b8b44ba3444a572ca2ffac076d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1391,7 +1391,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 21779f679346bb24293af91c560e1bb4, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1523,10 +1523,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33542991fff973647ba32459cccf2531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTrigger: 0
-  playOnce: 0
+  isTrigger: 1
+  playOnce: 1
   audioSource: {fileID: 154029475}
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 21779f679346bb24293af91c560e1bb4, type: 3}
   multiClips: []
   minVol: 1
   maxVol: 1
@@ -6661,8 +6661,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTrigger: 1
   playOnce: 1
-  audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
+  audioSource: {fileID: 454441899}
+  audioClip: {fileID: 8300000, guid: c2f1a0aaa9a9bcb45ac08ff71514cbee, type: 3}
   multiClips: []
   minVol: 1
   maxVol: 1
@@ -8585,11 +8585,10 @@ Transform:
   - {fileID: 200785690}
   - {fileID: 1075653614}
   - {fileID: 454441896}
-  - {fileID: 1212724169}
   - {fileID: 1165826723}
   - {fileID: 154029474}
+  - {fileID: 1212724169}
   - {fileID: 17048172}
-  - {fileID: 922177246}
   - {fileID: 1355272804}
   - {fileID: 1060454555}
   - {fileID: 1562904831}
@@ -12546,178 +12545,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1238657661}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &922177245
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 922177246}
-  - component: {fileID: 922177249}
-  - component: {fileID: 922177248}
-  - component: {fileID: 922177247}
-  m_Layer: 0
-  m_Name: Welding Guide Voice Line Trigger (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &922177246
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922177245}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 72.53, y: 0, z: -9.77}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 618946376}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &922177247
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922177245}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c2f1a0aaa9a9bcb45ac08ff71514cbee, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &922177248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922177245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33542991fff973647ba32459cccf2531, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTrigger: 1
-  playOnce: 1
-  audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
-  multiClips: []
-  minVol: 1
-  maxVol: 1
-  minPitch: 1
-  maxPitch: 1
---- !u!65 &922177249
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922177245}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 44.492367, y: 2.5967865, z: 10.933811}
-  m_Center: {x: 11.899214, y: 0.79839325, z: 0.098176956}
 --- !u!1 &928272301
 GameObject:
   m_ObjectHideFlags: 0
@@ -14198,7 +14025,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 21779f679346bb24293af91c560e1bb4, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -14299,7 +14126,7 @@ MonoBehaviour:
   isTrigger: 0
   playOnce: 0
   audioSource: {fileID: 1060454556}
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 18b549d89c382484d8c92e4ccc012f1c, type: 3}
   multiClips: []
   minVol: 1
   maxVol: 1
@@ -15324,7 +15151,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ef8854914b157f344aeffe55f735405c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -15424,8 +15251,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTrigger: 0
   playOnce: 0
-  audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
+  audioSource: {fileID: 1165826724}
+  audioClip: {fileID: 8300000, guid: ef8854914b157f344aeffe55f735405c, type: 3}
   multiClips: []
   minVol: 1
   maxVol: 1
@@ -15444,7 +15271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioPlayer: {fileID: 1165826725}
-  AC: {fileID: 8300000, guid: c2f1a0aaa9a9bcb45ac08ff71514cbee, type: 3}
+  AC: {fileID: 8300000, guid: ef8854914b157f344aeffe55f735405c, type: 3}
 --- !u!1 &1166541393
 GameObject:
   m_ObjectHideFlags: 0
@@ -16461,7 +16288,7 @@ MonoBehaviour:
   isTrigger: 0
   playOnce: 1
   audioSource: {fileID: 1212724170}
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: ac95dfe6a2652df4098be49f44df4f3e, type: 3}
   multiClips: []
   minVol: 1
   maxVol: 1
@@ -16479,7 +16306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d18f0969eb9cd40877dfcdd0597d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioPlayer: {fileID: 0}
+  AudioPlayer: {fileID: 1212724171}
 --- !u!1001 &1232116762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18584,7 +18411,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 21779f679346bb24293af91c560e1bb4, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -18685,7 +18512,7 @@ MonoBehaviour:
   isTrigger: 0
   playOnce: 1
   audioSource: {fileID: 1355272805}
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 5d5fd407c925aa04c97fbf23f596d41d, type: 3}
   multiClips: []
   minVol: 1
   maxVol: 1
