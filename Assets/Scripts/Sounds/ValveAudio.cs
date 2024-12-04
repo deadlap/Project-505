@@ -53,7 +53,7 @@ public class ValveAudio : MonoBehaviour
             return;
         }
         source.volume = 0;
-        source.pitch = 1;
+        source.pitch = 0.5f;
         source.clip = loopingClip;
         source.Play();
     }
