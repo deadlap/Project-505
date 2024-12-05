@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1591213443}
-  m_IndirectSpecularColor: {r: 0.028990248, g: 0.030007254, b: 0.03001278, a: 1}
+  m_IndirectSpecularColor: {r: 0.029087335, g: 0.0298977, b: 0.029896773, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -846,7 +846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -1194,7 +1194,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 121115218}
-  - component: {fileID: 121115219}
   - component: {fileID: 121115220}
   m_Layer: 0
   m_Name: Crack
@@ -1228,30 +1227,6 @@ Transform:
   - {fileID: 1042945362}
   m_Father: {fileID: 1007277806}
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 45}
---- !u!114 &121115219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121115217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: dff28ea67e6659841b061f61580098d2, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 1, y: 1}
-  m_UVBias: {x: 0, y: 0}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: 0, y: 0, z: 0.15}
-  m_Size: {x: 0.4, y: 0.4, z: 0.3}
-  m_FadeFactor: 1
 --- !u!114 &121115220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2634,7 +2609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -3544,7 +3519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -3617,7 +3592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -3690,7 +3665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -4721,7 +4696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -5517,7 +5492,7 @@ Transform:
   m_GameObject: {fileID: 366923070}
   serializedVersion: 2
   m_LocalRotation: {x: 0.66987246, y: -0.18067336, z: -0.21499676, w: 0.6873168}
-  m_LocalPosition: {x: -0.0106, y: 0.0262, z: 0.0987}
+  m_LocalPosition: {x: -0.045, y: 0.062, z: 0.097}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5556,7 +5531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -7777,7 +7752,7 @@ Transform:
   m_GameObject: {fileID: 505962047}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7406622, y: -0.30902117, z: -0.19360241, w: 0.5643081}
-  m_LocalPosition: {x: 0.1068, y: 0.1312, z: 0.1155}
+  m_LocalPosition: {x: 0.0877, y: 0.1928, z: 0.1226}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7795,7 +7770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -7889,7 +7864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -8110,7 +8085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -8663,7 +8638,7 @@ Transform:
   m_GameObject: {fileID: 571523122}
   serializedVersion: 2
   m_LocalRotation: {x: 0.6098531, y: -0.1620007, z: -0.22939542, w: 0.7410889}
-  m_LocalPosition: {x: -0.0972, y: -0.0714, z: 0.1207}
+  m_LocalPosition: {x: -0.132, y: -0.036, z: 0.119}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8702,7 +8677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -8912,7 +8887,7 @@ Transform:
   m_GameObject: {fileID: 591937464}
   serializedVersion: 2
   m_LocalRotation: {x: 0.6098531, y: -0.1620007, z: -0.22939542, w: 0.7410889}
-  m_LocalPosition: {x: -0.0722, y: -0.0388, z: 0.1055}
+  m_LocalPosition: {x: -0.107, y: -0.003, z: 0.104}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8951,7 +8926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -9754,7 +9729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -11943,7 +11918,7 @@ Transform:
   m_GameObject: {fileID: 802553897}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7406622, y: -0.30902117, z: -0.19360241, w: 0.5643081}
-  m_LocalPosition: {x: 0.0748, y: 0.1065, z: 0.1048}
+  m_LocalPosition: {x: 0.04, y: 0.142, z: 0.103}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11982,7 +11957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -12289,7 +12264,7 @@ Transform:
   m_GameObject: {fileID: 837525223}
   serializedVersion: 2
   m_LocalRotation: {x: 0.66987246, y: -0.18067336, z: -0.21499676, w: 0.6873168}
-  m_LocalPosition: {x: 0.0251, y: 0.0461, z: 0.0966}
+  m_LocalPosition: {x: -0.01, y: 0.082, z: 0.095}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12328,7 +12303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -12507,7 +12482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -13277,7 +13252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -14527,7 +14502,7 @@ Transform:
   m_GameObject: {fileID: 1042945361}
   serializedVersion: 2
   m_LocalRotation: {x: 0.51759297, y: -0.23325273, z: -0.31464162, w: 0.7607177}
-  m_LocalPosition: {x: -0.13909844, y: -0.13329902, z: 0.14299719}
+  m_LocalPosition: {x: -0.1778, y: -0.0671, z: 0.1342}
   m_LocalScale: {x: 0.0821063, y: 0.01, z: 0.08816924}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14566,7 +14541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -18696,7 +18671,7 @@ Transform:
   m_GameObject: {fileID: 1294345757}
   serializedVersion: 2
   m_LocalRotation: {x: 0.66987246, y: -0.18067336, z: -0.21499676, w: 0.6873168}
-  m_LocalPosition: {x: -0.0424, y: -0.006, z: 0.1008}
+  m_LocalPosition: {x: -0.077, y: 0.03, z: 0.099}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18735,7 +18710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -18989,7 +18964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -19798,7 +19773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -20092,7 +20067,7 @@ Transform:
   m_GameObject: {fileID: 1396490909}
   serializedVersion: 2
   m_LocalRotation: {x: 0.66987246, y: -0.18067336, z: -0.21499676, w: 0.6873168}
-  m_LocalPosition: {x: 0.0522, y: 0.0768, z: 0.0997}
+  m_LocalPosition: {x: 0.017, y: 0.113, z: 0.098}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20131,7 +20106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -21740,7 +21715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -22376,7 +22351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -22634,7 +22609,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1675719855}
-  - component: {fileID: 1675719857}
   - component: {fileID: 1675719856}
   m_Layer: 0
   m_Name: Crack 3
@@ -22652,7 +22626,7 @@ Transform:
   m_GameObject: {fileID: 1675719854}
   serializedVersion: 2
   m_LocalRotation: {x: 0.35355338, y: -0.1464466, z: 0.35355338, w: 0.8535535}
-  m_LocalPosition: {x: 0.013999939, y: -0.02, z: -0.02399826}
+  m_LocalPosition: {x: 0.133, y: -0.006, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -22683,30 +22657,6 @@ MonoBehaviour:
   points: []
   GasBubbleVFX: {fileID: 1549525441}
   Completed: 0
---- !u!114 &1675719857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675719854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: dff28ea67e6659841b061f61580098d2, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 1, y: 1}
-  m_UVBias: {x: 0, y: 0}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: 0, y: 0, z: 0.15}
-  m_Size: {x: 0.4, y: 0.4, z: 0.3}
-  m_FadeFactor: 1
 --- !u!1001 &1680286604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25330,7 +25280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -25968,7 +25918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -26701,7 +26651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -26970,7 +26920,7 @@ Transform:
   m_GameObject: {fileID: 1870068437}
   serializedVersion: 2
   m_LocalRotation: {x: 0.59786874, y: -0.15829451, z: -0.23196836, w: 0.7507906}
-  m_LocalPosition: {x: -0.1184, y: -0.0971, z: 0.133}
+  m_LocalPosition: {x: -0.1228, y: -0.0139, z: 0.1055}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27009,7 +26959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -27578,7 +27528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
@@ -28564,7 +28514,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2038899296}
-  - component: {fileID: 2038899298}
   - component: {fileID: 2038899297}
   m_Layer: 0
   m_Name: Crack 2
@@ -28582,7 +28531,7 @@ Transform:
   m_GameObject: {fileID: 2038899295}
   serializedVersion: 2
   m_LocalRotation: {x: 0.35355338, y: -0.1464466, z: 0.35355338, w: 0.8535535}
-  m_LocalPosition: {x: -13.7218, y: -0.02, z: -0.0307}
+  m_LocalPosition: {x: -14.0376, y: -0.016, z: -0.0267}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -28613,30 +28562,6 @@ MonoBehaviour:
   points: []
   GasBubbleVFX: {fileID: 1340427550}
   Completed: 0
---- !u!114 &2038899298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038899295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: dff28ea67e6659841b061f61580098d2, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 1, y: 1}
-  m_UVBias: {x: 0, y: 0}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: 0, y: 0, z: 0.15}
-  m_Size: {x: 0.4, y: 0.4, z: 0.3}
-  m_FadeFactor: 1
 --- !u!1 &2039492957
 GameObject:
   m_ObjectHideFlags: 0
@@ -29249,7 +29174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb617877843f6a44bf1413ba3de4e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weldPrefab: {fileID: 333909788065633581, guid: a7a9e618eb6697f4cb09a64143e103fd,
+  weldPrefab: {fileID: 919132149155446097, guid: b5c612287feed334b941cc51c42a21df,
     type: 3}
   weldHeight: 0.01
   minScale: 0.08
