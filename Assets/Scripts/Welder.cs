@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
+using PieHaptics;
 
 public class Welder : Equipment {
     [SerializeField] GameObject Effects;
     [SerializeField] GameObject WeldingEffect;
     [SerializeField] WeldingSounds SoundEffects;
+    private AddedHaptics myHaptics;
+
     public bool Activated {get; private set;}
     public override void Start() {
         base.Start();
+        if (TryGetComponent(out AddedHaptics ah)) myHaptics = ah;
     }
 
     public override void ActivateEquipment(InputAction.CallbackContext context){
@@ -50,8 +54,10 @@ public class Welder : Equipment {
             WeldingEffect.SetActive(toggle);
             if (toggle) {
                 SoundEffects.WeldCorrect();
+                myHaptics?.TriggerHaptic(LeftHandGrabbed);
             } else {
                 SoundEffects.EndWeld();
+                myHaptics?.EndHaptic(LeftHandGrabbed);
             }
         }
             
