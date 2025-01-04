@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1591213443}
-  m_IndirectSpecularColor: {r: 0.028991543, g: 0.030009193, b: 0.03001434, a: 1}
+  m_IndirectSpecularColor: {r: 0.029007059, g: 0.030018479, b: 0.030012641, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3378,7 +3378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intensity: 0.2
   duration: 0.1
-  isDanCourse: 0
+  isDanCourse: 1
   leftController: {fileID: 554447311}
   rightController: {fileID: 934958326}
 --- !u!1 &216120046
